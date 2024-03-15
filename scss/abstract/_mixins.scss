@@ -1,0 +1,37 @@
+@mixin clearfix(){
+    &::after{
+        content:'';
+        display:block;
+        clear: both;
+    }
+}
+@mixin pt-Absolute(){
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transition: transform(-50%,-50%);
+}
+
+/* media */
+@mixin mq($screen-width) {
+    @if $screen-width == "1200" {
+        @media screen and (max-width:1200px){
+            @content;
+        }
+    }    
+    @else if $screen-width == "980" {
+        @media screen and (max-width:980px){
+            @content;
+        }
+    }
+    @else if $screen-width == "600" {
+        @media screen and (max-width:600px){
+            @content;
+        }
+    }
+    @else if $screen-width == "320" {
+        @media screen and (max-width:320px){
+            @content;
+        }
+    }
+}
