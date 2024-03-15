@@ -64,7 +64,7 @@ span {
   width: 100%;
   padding: 0 3rem;
   box-sizing: border-box;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.5);
   z-index: 1999;
 }
 #header nav {
@@ -107,15 +107,18 @@ span {
 #header nav div h1 {
   width: 18rem;
   height: 5rem;
-  background: url(/img/logo.png) center center no-repeat;
-  background-size: contain;
+  cursor: pointer;
+}
+#header nav div h1 img {
+  width: 100%;
+  object-fit: cover;
 }
 #header nav div form fieldset {
   position: relative;
   width: 20rem;
   height: 4rem;
   border-radius: 2.6rem;
-  border: 2px solid #92c501;
+  border: none;
   background-color: #fff;
   overflow: hidden;
   transition: width 0.1s ease-in;
@@ -139,12 +142,16 @@ span {
 }
 #header nav div form fieldset a {
   display: block;
-  width: 4rem;
+  width: 2rem;
   height: 100%;
   position: absolute;
-  right: 0;
+  right: 1rem;
   top: 0;
-  background: url(/img/search-icon.png) center/1.8rem no-repeat;
+}
+#header nav div form fieldset a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 #header nav div ul {
   display: flex;
@@ -158,20 +165,17 @@ span {
   width: 100%;
   height: 100%;
 }
-#header nav div ul li:nth-of-type(1) a {
-  background: url(/img/header-icon-user.png) center center no-repeat;
-  background-size: cover;
-}
-#header nav div ul li:nth-of-type(2) a {
-  background: url(/img/header-icon-cart.png) center center no-repeat;
-  background-size: cover;
+#header nav div ul li a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .menu {
   position: fixed;
   left: 0;
   top: 0;
-  width: 30%;
+  width: 100%;
   height: 100vh;
   background-color: rgba(255, 255, 255, 0.8);
   visibility: hidden;
@@ -221,13 +225,11 @@ span {
 .show {
   visibility: visible;
   opacity: 1;
-  width: 100%;
 }
 
 section {
   width: 100%;
   height: 100vh;
-  border: 1px solid red;
 }
 
 #main {
@@ -237,6 +239,52 @@ section {
 #main .main-bg {
   width: 100%;
   height: 100%;
-  background: url(/img/main-img-2.jpg) center center no-repeat;
-  background-size: cover;
+}
+#main .main-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.introduce {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+.introduce-text {
+  text-align: center;
+}
+.introduce-text h2 {
+  font-size: 4rem;
+  margin: 3rem 0;
+}
+.introduce-text p {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.introduce-text p em {
+  font-style: normal;
+}
+.introduce ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 5rem 0 0 0;
+  width: 100%;
+}
+.introduce ul li {
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 2rem;
+}
+.introduce ul li img {
+  width: 100%;
+  border-radius: 2rem;
+  object-fit: cover;
+  transition: transform 0.2s ease-in;
+}
+.introduce ul li:hover img {
+  transform: scale(1.05);
 }
