@@ -17,6 +17,12 @@ $color-white:#fff;
     transition: transform(-50%,-50%);
 }
 
+@mixin img(){
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* media */
 @mixin mq($screen-width) {
     @if $screen-width == "1200" {
