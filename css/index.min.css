@@ -264,7 +264,7 @@ section {
 }
 .introduce-text h2 {
   font-size: 4rem;
-  margin: 0 0 3rem 0;
+  margin: 0 0 2rem 0;
 }
 .introduce-text p {
   font-size: 3rem;
@@ -296,44 +296,47 @@ section {
   transform: scale(1.05);
 }
 
+/* recommend */
 .recommend {
   position: relative;
   padding: 0 3rem;
-  box-sizing: border-box;
-  margin: 0 0 15rem 0;
+  margin: 0 0 20rem 0;
 }
 .recommend-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
   text-align: center;
 }
 .recommend-inner h2 {
+  height: 20%;
   font-size: 4rem;
-}
-.recommend-inner h2 em {
   text-transform: uppercase;
 }
-.recommend-inner p {
-  font-size: 2rem;
-  margin: 1rem 0 5rem 0;
+.recommend-inner h2 em {
+  color: #92c501;
+}
+.recommend-inner h2 p {
+  font-size: 2.5rem;
+  margin: 2rem 0 0 0;
 }
 .recommend-slide {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  height: 55rem;
+  height: 80%;
 }
-.recommend-slide .swiper {
-  width: 80%;
+.recommend-slide .swiper1 {
+  height: 100%;
 }
-.recommend-slide .swiper-wrapper {
+.recommend-slide .swiper1 .swiper-wrapper {
   display: flex;
+  justify-content: space-between;
 }
-.recommend-slide .swiper-slide {
+.recommend-slide .swiper1 .swiper-slide {
   position: relative;
-  border-radius: 2rem;
+  height: 100%;
 }
-.recommend-slide .swiper-slide span {
+.recommend-slide .swiper1 .swiper-slide span {
   position: absolute;
   left: 0;
   top: 0;
@@ -344,7 +347,7 @@ section {
   opacity: 0;
   transition: opacity 0.2s ease-in;
 }
-.recommend-slide .swiper-slide span dl {
+.recommend-slide .swiper1 .swiper-slide span dl {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -353,67 +356,40 @@ section {
   color: #fff;
   font-size: 1.9rem;
 }
-.recommend-slide .swiper-slide span dl dt {
+.recommend-slide .swiper1 .swiper-slide span dl dt {
   margin: 0 0 1rem 0;
 }
-.recommend-slide .swiper-slide span dl dd {
+.recommend-slide .swiper1 .swiper-slide span dl dd {
   margin: 0 0 1rem 0;
 }
-.recommend-slide .swiper-slide span dl dd:nth-of-type(1) {
+.recommend-slide .swiper1 .swiper-slide span dl dd:nth-of-type(1) {
   font-style: italic;
   color: #cacaca;
 }
-.recommend-slide .swiper-slide span dl dd b {
+.recommend-slide .swiper1 .swiper-slide span dl dd b {
   margin: 0 1rem 0 0;
   color: #92c501;
 }
-.recommend-slide .swiper-slide span dl dd em {
+.recommend-slide .swiper1 .swiper-slide span dl dd em {
   margin: 0 1rem 0 0;
   text-decoration: line-through;
   color: #cacaca;
 }
-.recommend-slide .swiper-slide img {
+.recommend-slide .swiper1 .swiper-slide img {
   border-radius: 2rem;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.recommend-slide .swiper-slide:hover span {
+.recommend-slide .swiper1 .swiper-slide:hover span {
   opacity: 1;
 }
-.recommend-slide-right {
-  position: relative;
-  border-radius: 2rem;
-  overflow: hidden;
-}
-.recommend-slide-right img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.2s ease-in;
-}
-.recommend-slide-right img:hover {
-  transform: scale(1.05);
-}
-.recommend-slide-right button {
-  position: absolute;
-  right: 3rem;
-  bottom: 3rem;
-  padding: 1rem 2rem;
-  border-radius: 2rem;
-  cursor: pointer;
-  color: #92c501;
-  background-color: #fff;
-  transition: all 0.3s ease-in;
-}
-.recommend-slide-right button:hover {
-  color: #fff;
-  background-color: #92c501;
-}
 
+/* advertise */
 .advertise {
   position: relative;
   padding: 0 3rem;
+  margin: 0 0 20rem 0;
   box-sizing: border-box;
 }
 .advertise-inner {
@@ -460,6 +436,7 @@ section {
   height: 100%;
   margin: 0 0 8rem 0;
   border-radius: 2rem;
+  cursor: pointer;
   overflow: hidden;
 }
 .advertise-right ul li img {
@@ -467,4 +444,57 @@ section {
 }
 .advertise-right ul li:hover img {
   transform: scale(1.05);
+}
+
+.review {
+  padding: 0 3rem;
+  margin: 0 0 10rem 0;
+  overflow: hidden;
+}
+.review-inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.review h2 {
+  height: 15%;
+  font-size: 4rem;
+  text-align: center;
+}
+.review-contents {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+  height: 85%;
+}
+.review-contents figure {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.review-contents figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+  transition: transform 0.2s ease-in;
+}
+.review-contents figure img:hover {
+  transform: scale(1.05);
+}
+.review-text {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+  height: 100%;
+}
+.review-text dl {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  border: 1px solid red;
 }
