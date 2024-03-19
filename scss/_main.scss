@@ -70,106 +70,7 @@ h2 {
         }
     }
 }
-/* recommend */
-.recommend {
-    position: relative;
-    padding: 0 3rem;
-    margin: 0 0 15rem 0;
 
-    &-inner {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-
-      h2 {
-        height: 20%;
-        
-        em {
-            color: $color-primary;
-        }
-
-        p {
-            margin: 2rem 0 0 0;
-            font-size: 1.6rem;
-            color: #555555;
-          }
-      }
-    }
-
-    &-slide {
-        height: 80%;
-        
-        .swiper1 {
-            height: 100%;
-
-            .swiper-wrapper {
-                display: flex;
-                justify-content: space-between;
-            }
-
-            .swiper-slide {
-                position: relative;
-                height: 100%;
-
-                span {
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: rgba(0,0,0,0.7);
-                    border-radius: 2rem;
-                    opacity: 0;
-                    transition: opacity .2s ease-in;
-    
-                    dl {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        width: 100%;
-                        color: #fff;
-                        font-size : 1.9rem;
-    
-                        dt {
-                            margin: 0 0 1rem 0;
-                        }
-                        dd {
-                            margin: 0 0 1rem 0;
-    
-                            &:nth-of-type(1) {
-                               font-style: italic;
-                               color: #cacaca;
-                            }
-    
-                            b {
-                                margin: 0 1rem 0 0;
-                                color: $color-primary;
-                            }
-                            em {
-                                margin: 0 1rem 0 0;
-                                text-decoration: line-through;
-                                color: #cacaca;
-                            }
-                        }
-                    }
-                }
-    
-                img {
-                    border-radius: 2rem;
-                    @include img();
-                }
-    
-                &:hover span {
-                    opacity: 1;
-                }
-            }
-        }
-    }
-}
 /* advertise */
 .advertise {
     position: relative;
@@ -237,88 +138,110 @@ h2 {
     }
 }
 
+/* recommend */
+.recommend,
 .event {
+    position: relative;
     padding: 0 3rem;
     margin: 0 0 15rem 0;
-    overflow: hidden;
 
     &-inner {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         width: 100%;
         height: 100%;
-    }
+        text-align: center;
 
-    h2 {
+      h2 {
+        height: 20%;
+        
+        em {
+            color: $color-primary;
+        }
+
         p {
             margin: 2rem 0 0 0;
             font-size: 1.6rem;
             color: #555555;
-        }
+          }
+      }
     }
 
-    &-contents {
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        gap: 2rem;
-        width: 100%;
-        height: 90%;
-        padding: 5rem 0;
-        box-sizing: border-box;
-
-        figure {
-            width: 100%;
+    &-slide {
+        height: 80%;
+        
+        .swiper1, 
+        .swiper2 {
             height: 100%;
-            border-radius: 2rem;
-            overflow: hidden;
 
-            img {
-                @include img();
-                border-radius: 2rem;
-                transition: transform .2s ease-in;
-
-                &:hover {
-                    transform: scale(1.05);
-                }
+            .swiper-wrapper {
+                display: flex;
+                justify-content: space-between;
             }
-            figcaption {
-                display: none;
-            }
-        }
-    }
 
-    &-text {
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        gap: 2rem;
-        width: 100%;
-        height: 100%;
+            .swiper-slide {
+                position: relative;
+                height: 100%;
+                border: 1px solid red;
 
-        dl {
-            padding: 5rem;
-            box-sizing: border-box;
-            border-radius: 2rem;
-            box-shadow: 0 0 .8rem 0 rgb(218, 218, 218);
-
-            dt {
-
-                h5 {
-                    font-size: 1.6rem;
-                    border-bottom: .2rem solid $color-primary;
-
-                    img {
-                        width: 2rem;
-                        height: 2rem;
-                        object-fit: cover;
+                span {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0,0,0,0.7);
+                    border-radius: 2rem;
+                    opacity: 0;
+                    transition: opacity .2s ease-in;
+    
+                    dl {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 100%;
+                        color: #fff;
+                        font-size : 1.9rem;
+    
+                        dt {
+                            margin: 0 0 1rem 0;
+                        }
+                        dd {
+                            margin: 0 0 1rem 0;
+    
+                            &:nth-of-type(1) {
+                               font-style: italic;
+                               color: #cacaca;
+                            }
+    
+                            b {
+                                margin: 0 1rem 0 0;
+                                color: $color-primary;
+                            }
+                            em {
+                                margin: 0 1rem 0 0;
+                                text-decoration: line-through;
+                                color: #cacaca;
+                            }
+                        }
                     }
-                }   
-            }
-            dd {
-                text-overflow: ellipsis;
+                }
+    
+                img {
+                    border-radius: 2rem;
+                    @include img();
+                }
+    
+                &:hover span {
+                    opacity: 1;
+                }
             }
         }
     }
 }
+
 
 .Campaign {
     height: auto;

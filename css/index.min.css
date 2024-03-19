@@ -303,94 +303,6 @@ h2 {
   transform: scale(1.05);
 }
 
-/* recommend */
-.recommend {
-  position: relative;
-  padding: 0 3rem;
-  margin: 0 0 15rem 0;
-}
-.recommend-inner {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-}
-.recommend-inner h2 {
-  height: 20%;
-}
-.recommend-inner h2 em {
-  color: #92c501;
-}
-.recommend-inner h2 p {
-  margin: 2rem 0 0 0;
-  font-size: 1.6rem;
-  color: #555555;
-}
-.recommend-slide {
-  height: 80%;
-}
-.recommend-slide .swiper1 {
-  height: 100%;
-}
-.recommend-slide .swiper1 .swiper-wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-.recommend-slide .swiper1 .swiper-slide {
-  position: relative;
-  height: 100%;
-}
-.recommend-slide .swiper1 .swiper-slide span {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 2rem;
-  opacity: 0;
-  transition: opacity 0.2s ease-in;
-}
-.recommend-slide .swiper1 .swiper-slide span dl {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  color: #fff;
-  font-size: 1.9rem;
-}
-.recommend-slide .swiper1 .swiper-slide span dl dt {
-  margin: 0 0 1rem 0;
-}
-.recommend-slide .swiper1 .swiper-slide span dl dd {
-  margin: 0 0 1rem 0;
-}
-.recommend-slide .swiper1 .swiper-slide span dl dd:nth-of-type(1) {
-  font-style: italic;
-  color: #cacaca;
-}
-.recommend-slide .swiper1 .swiper-slide span dl dd b {
-  margin: 0 1rem 0 0;
-  color: #92c501;
-}
-.recommend-slide .swiper1 .swiper-slide span dl dd em {
-  margin: 0 1rem 0 0;
-  text-decoration: line-through;
-  color: #cacaca;
-}
-.recommend-slide .swiper1 .swiper-slide img {
-  border-radius: 2rem;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.recommend-slide .swiper1 .swiper-slide:hover span {
-  opacity: 1;
-}
-
 /* advertise */
 .advertise {
   position: relative;
@@ -452,74 +364,135 @@ h2 {
   transform: scale(1.05);
 }
 
+/* recommend */
+.recommend,
 .event {
+  position: relative;
   padding: 0 3rem;
   margin: 0 0 15rem 0;
-  overflow: hidden;
 }
+.recommend-inner,
 .event-inner {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
+  text-align: center;
 }
-.event h2 p {
+.recommend-inner h2,
+.event-inner h2 {
+  height: 20%;
+}
+.recommend-inner h2 em,
+.event-inner h2 em {
+  color: #92c501;
+}
+.recommend-inner h2 p,
+.event-inner h2 p {
   margin: 2rem 0 0 0;
   font-size: 1.6rem;
   color: #555555;
 }
-.event-contents {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  width: 100%;
-  height: 90%;
-  padding: 5rem 0;
-  box-sizing: border-box;
+.recommend-slide,
+.event-slide {
+  height: 80%;
 }
-.event-contents figure {
+.recommend-slide .swiper1,
+.recommend-slide .swiper2,
+.event-slide .swiper1,
+.event-slide .swiper2 {
+  height: 100%;
+}
+.recommend-slide .swiper1 .swiper-wrapper,
+.recommend-slide .swiper2 .swiper-wrapper,
+.event-slide .swiper1 .swiper-wrapper,
+.event-slide .swiper2 .swiper-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.recommend-slide .swiper1 .swiper-slide,
+.recommend-slide .swiper2 .swiper-slide,
+.event-slide .swiper1 .swiper-slide,
+.event-slide .swiper2 .swiper-slide {
+  position: relative;
+  height: 100%;
+  border: 1px solid red;
+}
+.recommend-slide .swiper1 .swiper-slide span,
+.recommend-slide .swiper2 .swiper-slide span,
+.event-slide .swiper1 .swiper-slide span,
+.event-slide .swiper2 .swiper-slide span {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 2rem;
-  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
 }
-.event-contents figure img {
+.recommend-slide .swiper1 .swiper-slide span dl,
+.recommend-slide .swiper2 .swiper-slide span dl,
+.event-slide .swiper1 .swiper-slide span dl,
+.event-slide .swiper2 .swiper-slide span dl {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  color: #fff;
+  font-size: 1.9rem;
+}
+.recommend-slide .swiper1 .swiper-slide span dl dt,
+.recommend-slide .swiper2 .swiper-slide span dl dt,
+.event-slide .swiper1 .swiper-slide span dl dt,
+.event-slide .swiper2 .swiper-slide span dl dt {
+  margin: 0 0 1rem 0;
+}
+.recommend-slide .swiper1 .swiper-slide span dl dd,
+.recommend-slide .swiper2 .swiper-slide span dl dd,
+.event-slide .swiper1 .swiper-slide span dl dd,
+.event-slide .swiper2 .swiper-slide span dl dd {
+  margin: 0 0 1rem 0;
+}
+.recommend-slide .swiper1 .swiper-slide span dl dd:nth-of-type(1),
+.recommend-slide .swiper2 .swiper-slide span dl dd:nth-of-type(1),
+.event-slide .swiper1 .swiper-slide span dl dd:nth-of-type(1),
+.event-slide .swiper2 .swiper-slide span dl dd:nth-of-type(1) {
+  font-style: italic;
+  color: #cacaca;
+}
+.recommend-slide .swiper1 .swiper-slide span dl dd b,
+.recommend-slide .swiper2 .swiper-slide span dl dd b,
+.event-slide .swiper1 .swiper-slide span dl dd b,
+.event-slide .swiper2 .swiper-slide span dl dd b {
+  margin: 0 1rem 0 0;
+  color: #92c501;
+}
+.recommend-slide .swiper1 .swiper-slide span dl dd em,
+.recommend-slide .swiper2 .swiper-slide span dl dd em,
+.event-slide .swiper1 .swiper-slide span dl dd em,
+.event-slide .swiper2 .swiper-slide span dl dd em {
+  margin: 0 1rem 0 0;
+  text-decoration: line-through;
+  color: #cacaca;
+}
+.recommend-slide .swiper1 .swiper-slide img,
+.recommend-slide .swiper2 .swiper-slide img,
+.event-slide .swiper1 .swiper-slide img,
+.event-slide .swiper2 .swiper-slide img {
+  border-radius: 2rem;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 2rem;
-  transition: transform 0.2s ease-in;
 }
-.event-contents figure img:hover {
-  transform: scale(1.05);
-}
-.event-contents figure figcaption {
-  display: none;
-}
-.event-text {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  width: 100%;
-  height: 100%;
-}
-.event-text dl {
-  padding: 5rem;
-  box-sizing: border-box;
-  border-radius: 2rem;
-  box-shadow: 0 0 0.8rem 0 rgb(218, 218, 218);
-}
-.event-text dl dt h5 {
-  font-size: 1.6rem;
-  border-bottom: 0.2rem solid #92c501;
-}
-.event-text dl dt h5 img {
-  width: 2rem;
-  height: 2rem;
-  object-fit: cover;
-}
-.event-text dl dd {
-  text-overflow: ellipsis;
+.recommend-slide .swiper1 .swiper-slide:hover span,
+.recommend-slide .swiper2 .swiper-slide:hover span,
+.event-slide .swiper1 .swiper-slide:hover span,
+.event-slide .swiper2 .swiper-slide:hover span {
+  opacity: 1;
 }
 
 .Campaign {
