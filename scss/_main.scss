@@ -2,6 +2,12 @@ section {
     width: 100%;
     height: 100vh;
 }
+h2 {
+    font-size: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+/* main */
 #main {
     width: 100%;
     height: 100vh;
@@ -16,6 +22,7 @@ section {
     }
 }
 
+/* introduce */
 .introduce {
     display: flex;
     flex-direction: column;
@@ -26,8 +33,8 @@ section {
 
     &-text {
         text-align: center;
+
         h2 {
-            font-size: 4rem;
             margin: 0 0 2rem 0;
         }
         p {
@@ -67,7 +74,7 @@ section {
 .recommend {
     position: relative;
     padding: 0 3rem;
-    margin: 0 0 20rem 0;
+    margin: 0 0 15rem 0;
 
     &-inner {
         display: flex;
@@ -79,16 +86,15 @@ section {
 
       h2 {
         height: 20%;
-        font-size: 4rem;
-        text-transform: uppercase;
         
         em {
             color: $color-primary;
         }
 
         p {
-            font-size: 2.5rem;
             margin: 2rem 0 0 0;
+            font-size: 1.6rem;
+            color: #555555;
           }
       }
     }
@@ -168,7 +174,7 @@ section {
 .advertise {
     position: relative;
     padding: 0 3rem;
-    margin: 0 0 20rem 0;
+    margin: 0 0 15rem 0;
     box-sizing: border-box;
 
     &-inner {
@@ -231,9 +237,9 @@ section {
     }
 }
 
-.review {
+.event {
     padding: 0 3rem;
-    margin: 0 0 10rem 0;
+    margin: 0 0 15rem 0;
     overflow: hidden;
 
     &-inner {
@@ -244,9 +250,11 @@ section {
     }
 
     h2 {
-        height: 15%;
-        font-size: 4rem;
-        text-align: center;
+        p {
+            margin: 2rem 0 0 0;
+            font-size: 1.6rem;
+            color: #555555;
+        }
     }
 
     &-contents {
@@ -254,7 +262,9 @@ section {
         grid-template-columns: repeat(2,1fr);
         gap: 2rem;
         width: 100%;
-        height: 85%;
+        height: 90%;
+        padding: 5rem 0;
+        box-sizing: border-box;
 
         figure {
             width: 100%;
@@ -271,6 +281,9 @@ section {
                     transform: scale(1.05);
                 }
             }
+            figcaption {
+                display: none;
+            }
         }
     }
 
@@ -282,10 +295,106 @@ section {
         height: 100%;
 
         dl {
+            padding: 5rem;
+            box-sizing: border-box;
+            border-radius: 2rem;
+            box-shadow: 0 0 1rem 0 rgb(218, 218, 218);
+
+            dt {
+
+                h5 {
+                    font-size: 1.6rem;
+                    border-bottom: .2rem solid $color-primary;
+
+                    img {
+                        width: 2rem;
+                        height: 2rem;
+                        object-fit: cover;
+                    }
+                }   
+            }
+            dd {
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}
+
+.Campaign {
+    height: auto;
+    padding: 0 3rem;
+    margin: 0 0 15rem 0;
+    box-sizing: border-box;
+
+    &-inner {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        h2 {
+            height: 10%;
+            margin: 0 0 5rem 0;
+            
+            em {
+                color: $color-primary;;
+            }
+
+            p {
+                margin: 2rem 0 0 0;
+                font-size: 1.6rem;
+                color: #555555;
+            }
+        }
+    }
+
+    &-img {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        height: 30rem;
+
+        figure {
+            position: relative;
             width: 100%;
             height: 100%;
             border-radius: 2rem;
-            border: 1px solid red;
+            overflow: hidden;
+
+            img {
+                @include img();
+                border-radius: 2rem;
+                transition: .3s ease-in;
+                filter: grayscale(100%);
+
+                &:hover {
+                    filter: grayscale(0%);
+                    transform: scale(1.05);
+                }
+            }
+
+            figcaption {
+                display: none;
+            }
+
+            div {
+                position: absolute;
+                left: 3rem;
+                bottom: 3rem;
+                padding: 1rem;
+                box-sizing: border-box;
+                color: #fff;
+                background-color: rgba(0,0,0,0.1);
+                border-radius: 2rem;
+
+                h3 {
+                    font-size: 1.8rem;
+                }
+                p {
+                    margin: 1rem 0 0 0;
+                    text-transform: uppercase;
+                    font-size: 1.5rem;
+                }
+            }
         }
     }
 }

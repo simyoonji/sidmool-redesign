@@ -237,6 +237,13 @@ section {
   height: 100vh;
 }
 
+h2 {
+  font-size: 4rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* main */
 #main {
   width: 100%;
   height: 100vh;
@@ -251,6 +258,7 @@ section {
   object-fit: cover;
 }
 
+/* introduce */
 .introduce {
   display: flex;
   flex-direction: column;
@@ -263,7 +271,6 @@ section {
   text-align: center;
 }
 .introduce-text h2 {
-  font-size: 4rem;
   margin: 0 0 2rem 0;
 }
 .introduce-text p {
@@ -300,7 +307,7 @@ section {
 .recommend {
   position: relative;
   padding: 0 3rem;
-  margin: 0 0 20rem 0;
+  margin: 0 0 15rem 0;
 }
 .recommend-inner {
   display: flex;
@@ -312,15 +319,14 @@ section {
 }
 .recommend-inner h2 {
   height: 20%;
-  font-size: 4rem;
-  text-transform: uppercase;
 }
 .recommend-inner h2 em {
   color: #92c501;
 }
 .recommend-inner h2 p {
-  font-size: 2.5rem;
   margin: 2rem 0 0 0;
+  font-size: 1.6rem;
+  color: #555555;
 }
 .recommend-slide {
   height: 80%;
@@ -389,7 +395,7 @@ section {
 .advertise {
   position: relative;
   padding: 0 3rem;
-  margin: 0 0 20rem 0;
+  margin: 0 0 15rem 0;
   box-sizing: border-box;
 }
 .advertise-inner {
@@ -446,55 +452,142 @@ section {
   transform: scale(1.05);
 }
 
-.review {
+.event {
   padding: 0 3rem;
-  margin: 0 0 10rem 0;
+  margin: 0 0 15rem 0;
   overflow: hidden;
 }
-.review-inner {
+.event-inner {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
 }
-.review h2 {
-  height: 15%;
-  font-size: 4rem;
-  text-align: center;
+.event h2 p {
+  margin: 2rem 0 0 0;
+  font-size: 1.6rem;
+  color: #555555;
 }
-.review-contents {
+.event-contents {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   width: 100%;
-  height: 85%;
+  height: 90%;
+  padding: 5rem 0;
+  box-sizing: border-box;
 }
-.review-contents figure {
+.event-contents figure {
   width: 100%;
   height: 100%;
   border-radius: 2rem;
   overflow: hidden;
 }
-.review-contents figure img {
+.event-contents figure img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 2rem;
   transition: transform 0.2s ease-in;
 }
-.review-contents figure img:hover {
+.event-contents figure img:hover {
   transform: scale(1.05);
 }
-.review-text {
+.event-contents figure figcaption {
+  display: none;
+}
+.event-text {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   width: 100%;
   height: 100%;
 }
-.review-text dl {
+.event-text dl {
+  padding: 5rem;
+  box-sizing: border-box;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem 0 rgb(218, 218, 218);
+}
+.event-text dl dt h5 {
+  font-size: 1.6rem;
+  border-bottom: 0.2rem solid #92c501;
+}
+.event-text dl dt h5 img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+}
+.event-text dl dd {
+  text-overflow: ellipsis;
+}
+
+.Campaign {
+  height: auto;
+  padding: 0 3rem;
+  margin: 0 0 15rem 0;
+  box-sizing: border-box;
+}
+.Campaign-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.Campaign-inner h2 {
+  height: 10%;
+  margin: 0 0 5rem 0;
+}
+.Campaign-inner h2 em {
+  color: #92c501;
+}
+.Campaign-inner h2 p {
+  margin: 2rem 0 0 0;
+  font-size: 1.6rem;
+  color: #555555;
+}
+.Campaign-img {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  height: 30rem;
+}
+.Campaign-img figure {
+  position: relative;
   width: 100%;
   height: 100%;
   border-radius: 2rem;
-  border: 1px solid red;
+  overflow: hidden;
+}
+.Campaign-img figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+  transition: 0.3s ease-in;
+  filter: grayscale(100%);
+}
+.Campaign-img figure img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+.Campaign-img figure figcaption {
+  display: none;
+}
+.Campaign-img figure div {
+  position: absolute;
+  left: 3rem;
+  bottom: 3rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+}
+.Campaign-img figure div h3 {
+  font-size: 1.8rem;
+}
+.Campaign-img figure div p {
+  margin: 1rem 0 0 0;
+  text-transform: uppercase;
+  font-size: 1.5rem;
 }
