@@ -507,7 +507,7 @@ h2 {
   padding: 5rem;
   box-sizing: border-box;
   border-radius: 2rem;
-  box-shadow: 0 0 1rem 0 rgb(218, 218, 218);
+  box-shadow: 0 0 0.8rem 0 rgb(218, 218, 218);
 }
 .event-text dl dt h5 {
   font-size: 1.6rem;
@@ -590,4 +590,48 @@ h2 {
   margin: 1rem 0 0 0;
   text-transform: uppercase;
   font-size: 1.5rem;
+}
+
+/* custom */
+.custom {
+  height: auto;
+  padding: 0 3rem;
+  margin: 0 0 10rem 0;
+  box-sizing: border-box;
+}
+.custom ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.custom ul li {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  border-radius: 2rem;
+  box-shadow: 0 0 0.8rem 0 rgb(218, 218, 218);
+  transition: transform 0.2s ease-in;
+}
+.custom ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.custom ul li a img {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 0 1rem 0;
+  object-fit: cover;
+}
+.custom ul li a div {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.custom ul li a div h3 {
+  margin: 0 0 1rem 0;
+}
+.custom ul li:hover {
+  transform: translateY(-10%);
 }
