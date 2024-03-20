@@ -1,15 +1,7 @@
 // variables 
 $color-primary: #92c501;
-$color-secondary:#ff2d77;
 $color-white:#fff;
 
-@mixin clearfix(){
-    &::after{
-        content:'';
-        display:block;
-        clear: both;
-    }
-}
 @mixin pt-Absolute(){
     position: absolute;
     left: 50%;
