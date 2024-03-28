@@ -708,6 +708,7 @@ p {
 @media screen and (max-width: 767px) {
   .recommend,
   .event {
+    height: auto;
     margin: 0 0 10rem 0;
   }
 }
@@ -723,6 +724,14 @@ p {
 .recommend-inner h2,
 .event-inner h2 {
   height: 20%;
+  /* mobile */
+}
+@media screen and (max-width: 767px) {
+  .recommend-inner h2,
+  .event-inner h2 {
+    height: auto;
+    margin: 0 0 5rem 0;
+  }
 }
 .recommend-inner h2 em,
 .event-inner h2 em {

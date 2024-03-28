@@ -250,6 +250,7 @@ p {
     overflow: hidden;
 
     @include mq('767'){
+        height: auto;
         margin: 0 0 10rem 0;
     }
 
@@ -263,6 +264,11 @@ p {
 
       h2 {
         height: 20%;
+
+        @include mq('767'){
+            height: auto;
+            margin: 0 0 5rem 0;
+        }
 
         em {
             color: $color-primary;
