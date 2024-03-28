@@ -18,16 +18,25 @@ $color-white:#fff;
 /* media */
 @mixin mq($screen-width) {
     @if $screen-width == "1200" {
-        @media screen and (max-width:1200px){
+        /* desktop */
+        @media screen and (max-width:1200px){ 
             @content;
         }
     }    
     @else if $screen-width == "980" {
+        /* tablet */
         @media screen and (max-width:980px){
             @content;
         }
     }
+    @else if $screen-width == "767" {
+        /* mobile */
+        @media screen and (max-width:767px){
+            @content;
+        }
+    }
     @else if $screen-width == "600" {
+        /* mobile */
         @media screen and (max-width:600px){
             @content;
         }

@@ -16,7 +16,7 @@ const swiper = new Swiper('.swiper1', {
     spaceBetween: 10
     },
     640: {
-      slidesPerView: 1,
+      slidesPerView: 2,
       spaceBetween: 10
     },
     // 더 작은 화면에서는 슬라이드가 한 번에 하나씩 보여짐
@@ -50,7 +50,7 @@ const swiper2 = new Swiper('.swiper2', {
     spaceBetween: 10
     },
     640: {
-      slidesPerView: 1,
+      slidesPerView: 2,
       spaceBetween: 10
     },
     // 더 작은 화면에서는 슬라이드가 한 번에 하나씩 보여짐

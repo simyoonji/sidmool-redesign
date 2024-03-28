@@ -1,11 +1,48 @@
 section {
     width: 100%;
     height: 100vh;
+    padding: 0 3rem;
+    box-sizing: border-box;
+    opacity: 0;
+
+    @include mq('1200'){
+        padding: 0 2rem;
+    }
 }
 h2 {
     font-size: 4rem;
     text-align: center;
     text-transform: uppercase;
+
+    @include mq('1200'){
+        font-size: 3rem;
+    }
+    @include mq('980'){
+        font-size: 2.5rem;
+    }
+    @include mq('600'){
+        font-size: 2.3rem;
+    }
+    @include mq('320'){
+        font-size: 2.2rem;
+    }
+}
+
+p {
+    font-size: 1.6rem;
+
+    @include mq('1200'){
+        font-size: 1.5rem;
+    }
+    @include mq('980'){
+        font-size: 1.4rem;
+    }
+    @include mq('600'){
+        font-size: 1.3rem;
+    }
+    @include mq('320'){
+        font-size: 1rem;
+    }
 }
 /* main */
 #main {
@@ -27,18 +64,21 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 0 3rem;
     box-sizing: border-box;
+    text-align: center;
+
+    @include mq('1200'){
+        height: auto;
+        padding: 10rem 2rem;
+    }
 
     &-text {
-        text-align: center;
+        height: 20%;
 
         h2 {
             margin: 0 0 2rem 0;
         }
         p {
-            font-size: 3rem;
             text-transform: uppercase;
 
             em {
@@ -46,26 +86,69 @@ h2 {
             }
         }
     }
-    ul {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
-        margin: 5rem 0;
-        width: 100%;
 
-        li {
-            overflow: hidden;
-            cursor: pointer;
+    &-main {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 1rem;
+        margin: 0 0 3rem 0;
+
+        @include mq('1200'){
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 3rem 0 0 0;
+        }
+        @include mq('767'){
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        dl {
+            padding: 3rem;
+            box-sizing: border-box;
+            background-color: #f5f6ee;
             border-radius: 2rem;
 
-            img {
-                @include img();
-                border-radius: 2rem;
-                transition: transform .2s ease-in;
+            @include mq('1200'){
+                padding: 2rem;
             }
 
             &:hover img {
-                transform: scale(1.05);
+                transform: scale(1.1);
+            }
+
+            dt {
+
+                img {
+                    width: 7rem;
+                    height: 7rem;
+                    object-fit: cover;
+                    transition: transform .2s ease-in;
+                    -webkit-transition: transform .2s ease-in;
+                    -moz-transition: transform .2s ease-in;
+                    -o-transition: transform .2s ease-in;
+                }
+
+                h4 {
+                    margin: 1rem 0;
+                    font-size: 2rem;
+
+                    @include mq('1200'){
+                        font-size: 1.8rem;
+                    }
+                    @include mq('980'){
+                        font-size: 1.7rem;
+                    }
+                    @include mq('600'){
+                        font-size: 1.6rem;
+                    }
+                    @include mq('320'){
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+
+            dd {
+                margin: 2rem 0 0 0;
             }
         }
     }
@@ -74,25 +157,29 @@ h2 {
 /* advertise */
 .advertise {
     position: relative;
-    padding: 0 3rem;
-    margin: 0 0 15rem 0;
+    margin: 0 0 10rem 0;
     box-sizing: border-box;
 
+    
+
     &-inner {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
         justify-content: space-between;
         height: 100%;
 
         img {
             @include img();
             transition: transform .2s ease-in;
+            -webkit-transition: transform .2s ease-in;
+            -moz-transition: transform .2s ease-in;
+            -o-transition: transform .2s ease-in;
         }
     }
     &-left {
         position: sticky;
         left: 0;
         top: 0;
+        width: 45%;
         overflow: hidden;
         border-radius: 2rem;
 
@@ -108,6 +195,7 @@ h2 {
     }
 
     &-right {
+        width: 50%;
         padding: 8rem;
         box-sizing: border-box;
         overflow-x: hidden;
@@ -124,10 +212,11 @@ h2 {
                 height: 100%;
                 margin: 0 0 8rem 0;
                 border-radius: 2rem;
-                cursor: pointer;
                 overflow: hidden;
 
                 img {
+                    width: 100%;
+                    height: 100%;
                     border-radius: 2rem;
                 }
                 &:hover img {
@@ -142,8 +231,12 @@ h2 {
 .recommend,
 .event {
     position: relative;
-    padding: 0 3rem;
     margin: 0 0 15rem 0;
+    overflow: hidden;
+
+    @include mq('767'){
+        margin: 0 0 10rem 0;
+    }
 
     &-inner {
         display: flex;
@@ -155,21 +248,21 @@ h2 {
 
       h2 {
         height: 20%;
-        
+
         em {
             color: $color-primary;
         }
 
         p {
             margin: 2rem 0 0 0;
-            font-size: 1.6rem;
             color: #555555;
-          }
+        }
       }
     }
 
     &-slide {
         height: 80%;
+        overflow: hidden;
         
         .swiper1, 
         .swiper2 {
@@ -195,6 +288,9 @@ h2 {
                     border-radius: 2rem;
                     opacity: 0;
                     transition: opacity .2s ease-in;
+                    -webkit-transition: opacity .2s ease-in;
+                    -moz-transition: opacity .2s ease-in;
+                    -o-transition: opacity .2s ease-in;
                     white-space: nowrap;
     
                     dl {
@@ -204,7 +300,7 @@ h2 {
                         transform: translate(-50%, -50%);
                         width: 100%;
                         color: $color-white;
-                        font-size : 1.9rem;
+                        font-size : 1.6rem;
     
                         dt {
                             margin: 0 0 1rem 0;
@@ -233,7 +329,10 @@ h2 {
                         right: 3rem;
                         bottom: 3rem;
                         transform: translateX(100%);
-                        transition: all .2s ease-in;
+                        transition: .2s ease-in;
+                        -webkit-transition: .2s ease-in;
+                        -moz-transition: .2s ease-in;
+                        -o-transition: .2s ease-in;
                         opacity: 0;
 
                         li {
@@ -242,14 +341,25 @@ h2 {
                             button {
                                 width: 5rem;
                                 height: 5rem;
-                                cursor: pointer;
                                 border-radius: 50%;
-                                transition: all .2s ease-in;
+                                transition: background-color .2s ease-in;
+                                -webkit-transition: background-color .2s ease-in;
+                                -moz-transition: background-color .2s ease-in;
+                                -o-transition: background-color .2s ease-in;
+
+                                @include mq('767'){
+                                    width: 3.5rem;
+                                    height: 3.5rem;
+                                }
 
                                 img {
                                     width: 100%;
                                     height: 100%;
                                     object-fit: cover;
+
+                                    @include mq('767'){
+                                        object-fit: contain;
+                                    }
                                 }
 
                                 &:hover {
@@ -280,9 +390,12 @@ h2 {
 
 .Campaign {
     height: auto;
-    padding: 0 3rem;
     margin: 0 0 15rem 0;
     box-sizing: border-box;
+
+    @include mq('767'){
+        margin: 0 0 10rem 0;
+    }
 
     &-inner {
         display: flex;
@@ -299,7 +412,6 @@ h2 {
 
             p {
                 margin: 2rem 0 0 0;
-                font-size: 1.6rem;
                 color: #555555;
             }
         }
@@ -310,6 +422,11 @@ h2 {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
         height: 30rem;
+
+        @include mq('767'){
+            grid-template-columns: repeat(1, 1fr);
+            height: auto;
+        }
 
         figure {
             position: relative;
@@ -322,6 +439,9 @@ h2 {
                 @include img();
                 border-radius: 2rem;
                 transition: .3s ease-in;
+                -webkit-transition: .3s ease-in;
+                -moz-transition: .3s ease-in;
+                -o-transition: .3s ease-in;
                 filter: grayscale(100%);
 
                 &:hover {
@@ -351,7 +471,6 @@ h2 {
                 p {
                     margin: 1rem 0 0 0;
                     text-transform: uppercase;
-                    font-size: 1.5rem;
                 }
             }
         }
@@ -360,7 +479,7 @@ h2 {
 /* custom */
 .custom {
     height: auto;
-    padding: 0 3rem;
+   
     margin: 0 0 10rem 0;
     box-sizing: border-box;
 
@@ -368,6 +487,13 @@ h2 {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 2rem;
+
+        @include mq('1200'){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include mq('767'){
+            grid-template-columns: repeat(1, 1fr);
+        }
 
         li {
             width: 100%;
@@ -377,6 +503,9 @@ h2 {
             border-radius: 2rem;
             box-shadow: 0 0 .8rem 0 rgb(218, 218, 218);
             transition: transform .2s ease-in;
+            -webkit-transition: transform .2s ease-in;
+            -moz-transition: transform .2s ease-in;
+            -o-transition: transform .2s ease-in;
             white-space: nowrap;
 
             a {
@@ -399,13 +528,15 @@ h2 {
                     h3 {
                         margin: 0 0 1rem 0;
                     }
-                    p {
-                    }
                 }
             }
 
             &:hover {
                 transform: translateY(-10%);
+
+                @include mq('1200'){
+                    transform: translateY(-3%);
+                }
             }
         }
     }

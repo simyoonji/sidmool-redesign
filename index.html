@@ -20,6 +20,10 @@
     <title>Sidmool</title>
 </head>
 <body>
+    <!-- mouse -->
+    <div class="mouse">
+    </div>
+
      <!-- header -->
      <header id="header">
         <!-- nav -->
@@ -36,86 +40,69 @@
                 </h1>
             </div>
 
-            <!-- user -->
-            <div>
-                <form action="#none">
-                    <fieldset>
-                        <legend>search</legend>
-                        <input type="search" class="search-btn" required/>
-                        <a href="#none">
-                            <img src="./img/search-icon.png" alt="searchIcon">
-                        </a>
-                    </fieldset>
-                </form>
-                <!--  -->
-                <ul>
-                    <li>
-                        <a href="#none">
-                            <img src="./img/header-icon-user.png" alt="userIcon">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none">
-                            <img src="./img/header-icon-cart.png" alt="cartIcon">
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            <!--  -->
+            <ul>
+                <li>
+                    <a href="#none">
+                        <img src="./img/search-icon.png" alt="searchIcon">
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <img src="./img/header-icon-user.png" alt="userIcon">
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <img src="./img/header-icon-cart.png" alt="cartIcon">
+                    </a>
+                </li>
+            </ul>
         </nav>
+
+        <form action="#none" class="search-form">
+            <fieldset>
+                <legend>search</legend>
+                <input type="search" class="search-btn" required/>
+            </fieldset>
+        </form>
 
         <div class="menu">
             <div class="menu-inner">
                 <!--  -->
                 <ul class="menu-list">
                     <li>
-                        <button type="button">
-                            카테고리
-                        </button>
+                        <a href="#none">
+                            기능/고민별
+                        </a>
                     </li>
                     <li>
-                        <button type="button">
+                        <a href="#none">
+                           성분별
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
                             신제품
-                         </button>
+                        </a>
                     </li>
                     <li>
-                        <button type="button">
+                        <a href="#none">
                             이벤트
-                        </button>
+                        </a>
                     </li>
                     <li>
-                        <button type="button">
+                        <a href="#none">
                             시드물소개
-                         </button>
-                    </li>
-                </ul>
-
-                <!--  -->
-                <ul class="menu-sub">
-                    <li class="show">
-                        <a href="#none">스킨케어</a>
-                        <a href="#none">핸드&바디케어</a>
-                        <a href="#none">메이크업</a>
-                        <a href="#none">맨즈케어</a>
+                        </a>
                     </li>
                     <li>
-                        <a href="#none">이달의 신제품</a>
-                        <a href="#none">신제품 사용후기</a>
-                    </li>
-                    <li>
-                        <a href="#none">사은품 증정이벤트</a>
-                        <a href="#none">1+1이벤트</a>
-                        <a href="#none">세트할인</a>
-                        <a href="#none">제로마진</a>
-                    </li>
-                    <li>
-                        <a href="#none">시드물 개요</a>
-                        <a href="#none">시드물 연혁</a>
-                        <a href="#none">나눔과 실천</a>
-                        <a href="#none">개발 & 품질관리</a>
+                        <a href="#none">
+                            고객센터
+                        </a>
                     </li>
                 </ul>
             </div>
-               
         </div>
     </header>
 
@@ -133,20 +120,46 @@
             <p>since 2006 sidmool <em>eco philosophy</em></p>
         </div>
 
-        <ul>
-            <li>
-                <img src="./img/section_introduce-1.png" alt="img">
-            </li>
-            <li>
-               <img src="./img/section_introduce-2.png" alt="img">
-            </li>
-            <li>
-               <img src="./img/section_introduce-3.png" alt="img">
-            </li>
-            <li>
-               <img src="./img/section_introduce-4.png" alt="img">
-            </li>
-        </ul>
+        <div class="introduce-main">
+            <dl>
+                <dt>
+                    <img src="./img/section_introduce-1.png" alt="icon">
+                    <h4>천연 식물 성분</h4>
+                </dt>
+                <dd>천연 성분을 활용하여 피부 속 생명력을
+                    되찾을 수 있는 방법을 연구합니다.
+                </dd>
+            </dl>
+    
+            <dl>
+                <dt>
+                    <img src="./img/section_introduce-2.png" alt="icon">
+                    <h4>거품없는 합리적인 가격</h4>
+                </dt>
+                <dd>시드물은 거품없는 가격으로 판매합니다.
+                </dd>
+            </dl>
+    
+            <dl>
+                <dt>
+                    <img src="./img/section_introduce-3.png" alt="icon">
+                    <h4>유해성분 FREE 좋은 성분 고함량</h4>
+                </dt>
+                <dd>피부에 좋은 유효 천연 성분을
+                    고함량으로 사용해서 도움을 높였습니다.
+                </dd>
+            </dl>
+    
+            <dl>
+                <dt>
+                    <img src="./img/section_introduce-4.png" alt="icon">
+                    <h4>시드물은 사랑입니다.</h4>
+                </dt>
+                <dd>작지만 사랑을 전하기 위해서 노력하고
+                    있습니다. 항상 만족을 위해서 노력하겠습니다.
+                </dd>
+            </dl>
+        </div>
     </section>
 
     <!-- advertise -->
@@ -818,9 +831,6 @@
                         <a href="#none">개인정보처리방침</a>
                     </li>
                     <li>
-                        <a href="#none">이용안내</a>
-                    </li>
-                    <li>
                         <a href="#none">영상정보처리기기 운영/관리 방침</a>
                     </li>
                     <li>
@@ -835,6 +845,7 @@
                 <div class="footer-logo">
                     <span>
                         <img src="./img/logo.png" alt="logo">
+                        <img src="./img/logo-textonly.png" alt="logo">
                     </span>
 
                     <ul class="footer-sns">
@@ -914,23 +925,20 @@
     </footer>
 
     <aside class="quick">
-        <ul>
-            <li>
-                <a href="#none">
-                    <img src="./img/aside-icon-1.png" alt="icon">
-                </a>
-            </li>
-            <li>
-                <a href="#none">
-                    <img src="./img/aside-icon-2.png" alt="icon">
-                </a>
-            </li>
-        </ul>
+        <div>
+            <a href="#none">
+                <img src="./img/aside-icon-2.png" alt="icon">
+            </a>
+        </div>
     </aside>
         
-    <!-- swiper -->
+    <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./script/swiper.js" defer></script>
     <script src="./script/index.js" defer></script>
+    <script src="./script/scroll-animation.js" defer></script>
+    <script src="./script/topBtn.js" defer></script>
 </body>
 </html>
