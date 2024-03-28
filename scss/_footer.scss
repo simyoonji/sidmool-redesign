@@ -37,6 +37,7 @@ dl {
                 @include mq('767'){
                     display: grid;
                     grid-template-columns: repeat(3,1fr);
+                    gap: 1rem;
                     text-align: center;
                     margin: 0 0 2rem 0;
                 }
@@ -52,6 +53,10 @@ dl {
 
                     @include mq('1200'){
                         padding: .5rem .7rem;
+                    }
+                    @include mq('767'){
+                        border-radius: .5rem;
+                        box-shadow: 0 0 1px 0 #00000048;
                     }
                     @include mq('600'){
                         padding: .5rem 0rem;
@@ -131,8 +136,11 @@ dl {
                 @include mq('980'){
                     width: 15rem;
                 }
+                @include mq('767'){
+                    width: 13rem;
+                }
                 @include mq('600'){
-                   width: 10rem;
+                    width: 10rem;
                 }
 
                 img {
@@ -202,7 +210,7 @@ dl {
 
                     @include mq('600'){
                         text-align: center;
-                        margin: 0 0 3rem 0;
+                        margin: 2rem 0 4rem 0;
                     }
 
                     dt {
@@ -231,6 +239,10 @@ dl {
                     outline: none;
                     color: #666666;
                     cursor: none;
+
+                    @include mq('600'){
+                        padding: .5rem;
+                    }
 
 
                     option {

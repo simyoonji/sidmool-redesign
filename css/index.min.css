@@ -100,12 +100,11 @@ span {
 
 #header {
   position: fixed;
-  left: 0;
-  top: 0;
   width: 100%;
   padding: 0 3rem;
   box-sizing: border-box;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.3921568627);
   z-index: 1999;
   /* desktop */
 }
@@ -118,13 +117,7 @@ span {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 0;
-  /* desktop */
-}
-@media screen and (max-width: 1200px) {
-  #header nav {
-    padding: 1rem 0;
-  }
+  padding: 0.8rem 0;
 }
 #header nav div {
   display: flex;
@@ -137,10 +130,24 @@ span {
   margin: 0 3rem 0 0;
   z-index: 9999;
   /* desktop */
+  /* mobile */
+  /* mobile */
 }
 @media screen and (max-width: 1200px) {
   #header nav div .menu-open {
     margin: 0 2rem 0 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  #header nav div .menu-open {
+    width: 2.5rem;
+    height: 2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  #header nav div .menu-open {
+    width: 2rem;
+    height: 1.9rem;
   }
 }
 #header nav div .menu-open span {
@@ -154,6 +161,12 @@ span {
   -webkit-transition: top 0.1s ease-in, transform 0.1s ease-in, opacity 0.1s ease-in, bottom 0.1s ease-in;
   -moz-transition: top 0.1s ease-in, transform 0.1s ease-in, opacity 0.1s ease-in, bottom 0.1s ease-in;
   -o-transition: top 0.1s ease-in, transform 0.1s ease-in, opacity 0.1s ease-in, bottom 0.1s ease-in;
+  /* mobile */
+}
+@media screen and (max-width: 600px) {
+  #header nav div .menu-open span {
+    height: 0.3rem;
+  }
 }
 #header nav div .menu-open span:nth-of-type(1) {
   top: 0;
@@ -183,6 +196,8 @@ span {
   z-index: 9999;
   /* desktop */
   /* tablet */
+  /* mobile */
+  /* mobile */
 }
 @media screen and (max-width: 1200px) {
   #header nav div h1 {
@@ -192,6 +207,16 @@ span {
 @media screen and (max-width: 980px) {
   #header nav div h1 {
     width: 15rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  #header nav div h1 {
+    width: 13rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  #header nav div h1 {
+    width: 10rem;
   }
 }
 #header nav div h1 img {
@@ -208,15 +233,18 @@ span {
   width: 3rem;
   height: 3rem;
   /* desktop */
-}
-#header nav ul li:nth-of-type(1) {
-  width: 2.5rem;
-  height: 2.5rem;
+  /* mobile */
 }
 @media screen and (max-width: 1200px) {
   #header nav ul li {
     width: 2.5rem;
     height: 2.5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  #header nav ul li {
+    width: 2rem;
+    height: 2rem;
   }
 }
 #header nav ul li a {
@@ -227,6 +255,95 @@ span {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+#header nav ul .search-open {
+  width: 2.5rem;
+  height: 2.5rem;
+  /* desktop */
+  /* mobile */
+}
+@media screen and (max-width: 1200px) {
+  #header nav ul .search-open {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  #header nav ul .search-open {
+    width: 1.5rem;
+    height: 1.7rem;
+  }
+}
+
+.search-form {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 3rem 2rem;
+  box-sizing: border-box;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(255, 255, 255, 0.937254902);
+  transition: opacity 0.2s ease-in, visibility 0.2s ease-in;
+  -webkit-transition: opacity 0.2s ease-in, visibility 0.2s ease-in;
+  -moz-transition: opacity 0.2s ease-in, visibility 0.2s ease-in;
+  -o-transition: opacity 0.2s ease-in, visibility 0.2s ease-in;
+  box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.1137254902);
+  /* mobile */
+}
+@media screen and (max-width: 600px) {
+  .search-form {
+    padding: 1.5rem 2rem;
+  }
+}
+.search-form form {
+  margin: 0 auto;
+  max-width: 60rem;
+  text-align: center;
+}
+.search-form form fieldset {
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+}
+.search-form form fieldset:hover legend {
+  color: #92c501;
+}
+.search-form form fieldset legend {
+  padding: 0 0 2rem 0;
+  text-transform: uppercase;
+  transition: color 0.2s ease-in;
+  -webkit-transition: color 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in;
+  font-size: 2rem;
+  font-style: italic;
+  /* mobile */
+}
+@media screen and (max-width: 600px) {
+  .search-form form fieldset legend {
+    padding: 0 0 1rem 0;
+    size: 1.8rem;
+  }
+}
+.search-form form fieldset input {
+  width: 100%;
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+  box-shadow: 0 0 2px 0 #92c501;
+  /* mobile */
+}
+@media screen and (max-width: 600px) {
+  .search-form form fieldset input {
+    padding: 0.8rem 2rem;
+  }
+}
+
+.search-form.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 .menu {
@@ -970,6 +1087,7 @@ dl {
   #footer .footer-inner > ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
     text-align: center;
     margin: 0 0 2rem 0;
   }
@@ -986,10 +1104,17 @@ dl {
   box-sizing: border-box;
   /* desktop */
   /* mobile */
+  /* mobile */
 }
 @media screen and (max-width: 1200px) {
   #footer .footer-inner > ul li {
     padding: 0.5rem 0.7rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  #footer .footer-inner > ul li {
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.2823529412);
   }
 }
 @media screen and (max-width: 600px) {
@@ -1074,6 +1199,7 @@ dl {
   /* desktop */
   /* tablet */
   /* mobile */
+  /* mobile */
 }
 @media screen and (max-width: 1200px) {
   #footer .footer-logo span {
@@ -1083,6 +1209,11 @@ dl {
 @media screen and (max-width: 980px) {
   #footer .footer-logo span {
     width: 15rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  #footer .footer-logo span {
+    width: 13rem;
   }
 }
 @media screen and (max-width: 600px) {
@@ -1155,7 +1286,7 @@ dl {
 @media screen and (max-width: 600px) {
   #footer .footer-info-left > dl {
     text-align: center;
-    margin: 0 0 3rem 0;
+    margin: 2rem 0 4rem 0;
   }
 }
 #footer .footer-info-left > dl dt {
@@ -1182,6 +1313,12 @@ dl {
   outline: none;
   color: #666666;
   cursor: none;
+  /* mobile */
+}
+@media screen and (max-width: 600px) {
+  #footer .footer-info-familysite select {
+    padding: 0.5rem;
+  }
 }
 #footer .footer-info-familysite select option {
   color: #666666;

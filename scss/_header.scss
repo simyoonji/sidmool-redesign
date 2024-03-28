@@ -1,11 +1,10 @@
 #header {
     position: fixed;
-    left: 0;
-    top: 0;
     width: 100%;
     padding: 0 3rem;
     box-sizing: border-box;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 .8rem 0 #00000064;
     z-index: 1999;
 
     @include mq('1200'){
@@ -16,12 +15,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1.5rem 0;
-
-        @include mq('1200'){
-            padding: 1rem 0;
-        }
-    
+        padding: .8rem 0;
 
         div {
             display: flex;
@@ -37,6 +31,14 @@
                 @include mq('1200'){
                     margin: 0 2rem 0 0;
                 }
+                @include mq('767'){
+                    width: 2.5rem;
+                    height: 2rem; 
+                }
+                @include mq('600'){
+                    width: 2rem;
+                    height: 1.9rem;
+                }
             
                 span {
                     display: block;
@@ -49,7 +51,12 @@
                     -webkit-transition: top .1s ease-in, transform .1s ease-in, opacity .1s ease-in, bottom .1s ease-in;
                     -moz-transition: top .1s ease-in, transform .1s ease-in, opacity .1s ease-in, bottom .1s ease-in;
                     -o-transition: top .1s ease-in, transform .1s ease-in, opacity .1s ease-in, bottom .1s ease-in;
-            
+                   
+                    @include mq('600'){
+                        height: .3rem;
+                    }
+                    
+
                     &:nth-of-type(1) {
                         top: 0;
                     }
@@ -85,6 +92,12 @@
                 @include mq('980'){
                     width: 15rem;
                 }
+                @include mq('767'){
+                    width: 13rem;
+                }
+                @include mq('600'){
+                    width: 10rem;
+                }
 
                 img {
                     width: 100%;
@@ -103,14 +116,13 @@
                 width: 3rem;
                 height: 3rem;
 
-                &:nth-of-type(1) {
-                    width: 2.5rem;
-                    height: 2.5rem;
-                }
-                
                 @include mq('1200'){
                     width: 2.5rem;
                     height: 2.5rem;
+                }
+                @include mq('600'){
+                    width: 2rem;
+                    height: 2rem;
                 }
 
                 a {
@@ -124,8 +136,93 @@
                     }
                 }
             }
+            .search-open {
+                width: 2.5rem;
+                height: 2.5rem;
+
+                @include mq('1200'){
+                    width: 2rem;
+                    height: 2rem;
+                }
+                @include mq('600'){
+                    width: 1.5rem;
+                    height: 1.7rem;
+                }
+            }
         }
     }
+}
+.search-form {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 3rem 2rem;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #ffffffef;
+    transition: opacity .2s ease-in, visibility .2s ease-in;
+    -webkit-transition: opacity .2s ease-in, visibility .2s ease-in;
+    -moz-transition: opacity .2s ease-in, visibility .2s ease-in;
+    -o-transition: opacity .2s ease-in, visibility .2s ease-in;
+    box-shadow: 0 0 .8rem 0 #0000001d;
+
+    @include mq('600'){
+        padding: 1.5rem 2rem;
+    }
+
+    form {
+        margin: 0 auto;
+        max-width: 60rem;
+        text-align: center;
+       
+        fieldset {
+            border: none;
+            outline: none;
+            border-radius: 2rem;
+
+            &:hover legend {
+                color: $color-primary;
+            }
+
+            legend {
+                padding: 0 0 2rem 0;
+                text-transform: uppercase;
+                 transition: color .2s ease-in;
+                -webkit-transition: color .2s ease-in;
+                -moz-transition: color .2s ease-in;
+                -o-transition: color .2s ease-in;
+
+                font : {
+                    size: 2rem;
+                    style: italic;
+                }
+
+                @include mq('600'){
+                    padding: 0 0 1rem 0;
+                    size: 1.8rem;
+                }
+            }
+
+            input {
+                width: 100%;
+                padding: 1rem 2rem;
+                border: none;
+                outline: none;
+                border-radius: 2rem;
+                box-shadow: 0 0 2px 0 $color-primary;
+
+                
+                @include mq('600'){
+                    padding: .8rem 2rem;
+                }
+            }
+        }
+    }
+}
+.search-form.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 .menu {
