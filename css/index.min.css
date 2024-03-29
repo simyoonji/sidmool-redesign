@@ -471,29 +471,29 @@ h2 {
   }
 }
 
-p {
+p, button {
   font-size: 1.6rem;
   /* desktop */
   /* tablet */
   /* mobile */
 }
 @media screen and (max-width: 1200px) {
-  p {
+  p, button {
     font-size: 1.5rem;
   }
 }
 @media screen and (max-width: 980px) {
-  p {
+  p, button {
     font-size: 1.4rem;
   }
 }
 @media screen and (max-width: 600px) {
-  p {
+  p, button {
     font-size: 1.3rem;
   }
 }
 @media screen and (max-width: 320px) {
-  p {
+  p, button {
     font-size: 1rem;
   }
 }
@@ -634,67 +634,144 @@ p {
 
 /* advertise */
 .advertise {
-  position: relative;
-  margin: 0 0 10rem 0;
-  box-sizing: border-box;
+  height: auto;
+  opacity: inherit;
 }
 .advertise-inner {
-  display: flex;
-  justify-content: space-between;
-  height: 100%;
+  padding: 3rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+  /* desktop */
 }
-.advertise-inner img {
+@media screen and (max-width: 1200px) {
+  .advertise-inner {
+    padding: 0rem;
+  }
+}
+.advertise-list {
+  /* mobile */
+}
+.advertise-list li {
+  display: flex;
+  align-items: center;
+  margin: 0 0 10rem 0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  /* mobile */
+}
+@media screen and (max-width: 767px) {
+  .advertise-list li {
+    flex-direction: column-reverse;
+    margin: 0 0 5rem 0;
+  }
+}
+.advertise-list li:hover img {
+  transform: scale(1.01);
+}
+.advertise-list li a {
+  width: 50%;
+  padding: 3rem;
+  box-sizing: border-box;
+  border-radius: 2rem;
+  overflow: hidden;
+  /* tablet */
+  /* mobile */
+  /* mobile */
+}
+@media screen and (max-width: 980px) {
+  .advertise-list li a {
+    padding: 0rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .advertise-list li a {
+    width: 100%;
+    padding: 5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .advertise-list li a {
+    width: 100%;
+    padding: 3rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .advertise-list li a {
+    padding: 2rem;
+  }
+}
+.advertise-list li a img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 2rem;
   transition: transform 0.2s ease-in;
-  -webkit-transition: transform 0.2s ease-in;
-  -moz-transition: transform 0.2s ease-in;
-  -o-transition: transform 0.2s ease-in;
 }
-.advertise-left {
-  position: sticky;
-  left: 0;
-  top: 0;
-  width: 45%;
-  overflow: hidden;
-  border-radius: 2rem;
+.advertise-list li:nth-of-type(2), .advertise-list li:nth-of-type(4) {
+  flex-direction: row-reverse;
+  /* mobile */
 }
-.advertise-left:hover img {
-  transform: scale(1.05);
+@media screen and (max-width: 767px) {
+  .advertise-list li:nth-of-type(2), .advertise-list li:nth-of-type(4) {
+    flex-direction: column-reverse;
+  }
 }
-.advertise-left h2 {
-  position: absolute;
-  right: 2rem;
-  bottom: 1rem;
-}
-.advertise-right {
+.advertise-list li div {
   width: 50%;
-  padding: 8rem;
+  padding: 3rem;
   box-sizing: border-box;
-  overflow-x: hidden;
-  overflow: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  text-align: center;
+  /* tablet */
+  /* mobile */
 }
-.advertise-right ul {
-  width: 100%;
-  height: 100%;
+@media screen and (max-width: 980px) {
+  .advertise-list li div {
+    padding: 2rem;
+  }
 }
-.advertise-right ul li {
-  width: 100%;
-  height: 100%;
-  margin: 0 0 8rem 0;
+@media screen and (max-width: 767px) {
+  .advertise-list li div {
+    width: 100%;
+    padding: 0rem;
+    margin: 0 0 3rem 0;
+  }
+}
+.advertise-list li div h2 em {
+  color: #92c501;
+}
+.advertise-list li div p {
+  margin: 3rem 0 0 0;
+  /* mobile */
+}
+@media screen and (max-width: 767px) {
+  .advertise-list li div p {
+    margin: 2rem 0 0 0;
+  }
+}
+.advertise-list li div button {
+  padding: 1rem 1.2rem;
+  margin: 5rem 0 0 0;
+  box-sizing: border-box;
   border-radius: 2rem;
-  overflow: hidden;
+  background-color: #d9d9d9;
+  color: #fff;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in;
+  /* mobile */
+  /* mobile */
 }
-.advertise-right ul li img {
-  width: 100%;
-  height: 100%;
-  border-radius: 2rem;
+.advertise-list li div button:hover {
+  background-color: #c9d8a3;
 }
-.advertise-right ul li:hover img {
-  transform: scale(1.05);
+@media screen and (max-width: 767px) {
+  .advertise-list li div button {
+    margin: 2rem 0 0 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .advertise-list li div button {
+    padding: 1rem;
+  }
 }
 
 /* recommend */

@@ -28,7 +28,7 @@ h2 {
     }
 }
 
-p {
+p,button {
     font-size: 1.6rem;
 
     @include mq('1200'){
@@ -171,71 +171,126 @@ p {
 
 /* advertise */
 .advertise {
-    position: relative;
-    margin: 0 0 10rem 0;
-    box-sizing: border-box;
-
-    
+    height: auto;
+    opacity: inherit;
 
     &-inner {
-        display: flex;
-        justify-content: space-between;
-        height: 100%;
-
-        img {
-            @include img();
-            transition: transform .2s ease-in;
-            -webkit-transition: transform .2s ease-in;
-            -moz-transition: transform .2s ease-in;
-            -o-transition: transform .2s ease-in;
-        }
-    }
-    &-left {
-        position: sticky;
-        left: 0;
-        top: 0;
-        width: 45%;
-        overflow: hidden;
-        border-radius: 2rem;
-
-        
-        &:hover img {
-            transform: scale(1.05);
-        }
-        h2 {
-            position: absolute;
-            right: 2rem;
-            bottom: 1rem;
-        }
-    }
-
-    &-right {
-        width: 50%;
-        padding: 8rem;
+        padding: 3rem;
         box-sizing: border-box;
-        overflow-x: hidden;
-        overflow: scroll;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-        
-        ul {
-            width: 100%;
-            height: 100%;
+        margin: 0 auto;
 
-            li {
-                width: 100%;
-                height: 100%;
-                margin: 0 0 8rem 0;
+        @include mq('1200'){
+            padding: 0rem;
+        }
+    }
+    
+    &-list {
+
+        @include mq('767'){
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            margin: 0 0 10rem 0;
+            opacity: 0;
+            transition: opacity .2s ease;
+
+            @include mq('767'){
+                flex-direction: column-reverse;
+                margin: 0 0 5rem 0;
+            }
+
+            &:hover img {
+                transform: scale(1.01);
+            }
+
+            a {
+                width: 50%;
+                padding: 3rem;
+                box-sizing: border-box;
                 border-radius: 2rem;
                 overflow: hidden;
+                
+                @include mq('980'){
+                    padding: 0rem;
+                }
+                @include mq('767'){
+                    width: 100%;
+                    padding: 5rem;
+                }
+                @include mq('600'){
+                    width: 100%;
+                    padding: 3rem;
+                }
+                @include mq('320'){
+                    padding: 2rem;
+                }
 
                 img {
-                    width: 100%;
-                    height: 100%;
+                    @include img();
                     border-radius: 2rem;
+                    transition: transform .2s ease-in;
                 }
-                &:hover img {
-                    transform: scale(1.05);
+            }
+
+            &:nth-of-type(2),
+            &:nth-of-type(4) {
+                flex-direction: row-reverse;
+
+                @include mq('767'){
+                    flex-direction: column-reverse;
+                }
+            }
+          
+
+            div {
+                width: 50%;
+                padding: 3rem;
+                box-sizing: border-box;
+                text-align: center;
+
+                @include mq('980'){
+                    padding: 2rem;
+                }
+                @include mq('767'){
+                    width: 100%;
+                    padding: 0rem;
+                    margin: 0 0 3rem 0;
+                }
+
+                h2 {
+                    em {
+                        color: $color-primary;
+                    }
+                }
+                p {
+                    margin: 3rem 0 0 0;
+
+                    @include mq('767'){
+                        margin: 2rem 0 0 0;
+                    }
+                }
+                button {
+                    padding: 1rem 1.2rem;
+                    margin: 5rem 0 0 0;
+                    box-sizing: border-box;
+                    border-radius: 2rem;
+                    background-color: #d9d9d9;
+                    color: #fff;
+                    font-weight: 600;
+                    transition: background-color .2s ease-in;
+
+                    &:hover {
+                        background-color: #c9d8a3;
+                    }
+
+                    @include mq('767'){
+                        margin: 2rem 0 0 0;
+                    }
+                    @include mq('600'){
+                        padding: 1rem;
+                    }
                 }
             }
         }
