@@ -226,7 +226,10 @@ span {
     width: 10rem;
   }
 }
-#header nav div h1 img {
+#header nav div h1 a {
+  display: block;
+}
+#header nav div h1 a img {
   width: 100%;
   object-fit: cover;
 }

@@ -98,10 +98,13 @@
                 @include mq('600'){
                     width: 10rem;
                 }
+                a {
+                    display: block;
 
-                img {
-                    width: 100%;
-                    object-fit: cover;
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
                 }
              }
         }
