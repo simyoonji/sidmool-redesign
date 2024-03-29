@@ -323,7 +323,7 @@ span {
 @media screen and (max-width: 600px) {
   .search-form form fieldset legend {
     padding: 0 0 1rem 0;
-    size: 1.8rem;
+    font-size: 1.8rem;
   }
 }
 .search-form form fieldset input {
