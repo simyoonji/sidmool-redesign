@@ -601,35 +601,30 @@ p, button {
   -moz-transition: transform 0.2s ease-in;
   -o-transition: transform 0.2s ease-in;
 }
-.introduce-main dl dt h4 {
+.introduce-main dl dd {
+  margin: 2rem 0 0 0;
+}
+.introduce-subheading {
   margin: 1rem 0;
-  font-size: 2rem;
-  /* desktop */
+  font-size: 1.8rem;
+  font-weight: 600;
   /* tablet */
   /* mobile */
 }
-@media screen and (max-width: 1200px) {
-  .introduce-main dl dt h4 {
-    font-size: 1.8rem;
-  }
-}
 @media screen and (max-width: 980px) {
-  .introduce-main dl dt h4 {
+  .introduce-subheading {
     font-size: 1.7rem;
   }
 }
 @media screen and (max-width: 600px) {
-  .introduce-main dl dt h4 {
+  .introduce-subheading {
     font-size: 1.6rem;
   }
 }
 @media screen and (max-width: 320px) {
-  .introduce-main dl dt h4 {
+  .introduce-subheading {
     font-size: 1.5rem;
   }
-}
-.introduce-main dl dd {
-  margin: 2rem 0 0 0;
 }
 
 /* advertise */
@@ -845,10 +840,10 @@ p, button {
   height: 100%;
   overflow: hidden;
 }
-.recommend-slide .swiper1 .swiper-slide span,
-.recommend-slide .swiper2 .swiper-slide span,
-.event-slide .swiper1 .swiper-slide span,
-.event-slide .swiper2 .swiper-slide span {
+.recommend-slide .swiper1 .swiper-slide > div,
+.recommend-slide .swiper2 .swiper-slide > div,
+.event-slide .swiper1 .swiper-slide > div,
+.event-slide .swiper2 .swiper-slide > div {
   position: absolute;
   left: 0;
   top: 0;
@@ -863,10 +858,10 @@ p, button {
   -o-transition: opacity 0.2s ease-in;
   white-space: nowrap;
 }
-.recommend-slide .swiper1 .swiper-slide span dl,
-.recommend-slide .swiper2 .swiper-slide span dl,
-.event-slide .swiper1 .swiper-slide span dl,
-.event-slide .swiper2 .swiper-slide span dl {
+.recommend-slide .swiper1 .swiper-slide > div dl,
+.recommend-slide .swiper2 .swiper-slide > div dl,
+.event-slide .swiper1 .swiper-slide > div dl,
+.event-slide .swiper2 .swiper-slide > div dl {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -875,44 +870,44 @@ p, button {
   color: #fff;
   font-size: 1.6rem;
 }
-.recommend-slide .swiper1 .swiper-slide span dl dt,
-.recommend-slide .swiper2 .swiper-slide span dl dt,
-.event-slide .swiper1 .swiper-slide span dl dt,
-.event-slide .swiper2 .swiper-slide span dl dt {
+.recommend-slide .swiper1 .swiper-slide > div dl dt,
+.recommend-slide .swiper2 .swiper-slide > div dl dt,
+.event-slide .swiper1 .swiper-slide > div dl dt,
+.event-slide .swiper2 .swiper-slide > div dl dt {
   margin: 0 0 1rem 0;
 }
-.recommend-slide .swiper1 .swiper-slide span dl dd,
-.recommend-slide .swiper2 .swiper-slide span dl dd,
-.event-slide .swiper1 .swiper-slide span dl dd,
-.event-slide .swiper2 .swiper-slide span dl dd {
+.recommend-slide .swiper1 .swiper-slide > div dl dd,
+.recommend-slide .swiper2 .swiper-slide > div dl dd,
+.event-slide .swiper1 .swiper-slide > div dl dd,
+.event-slide .swiper2 .swiper-slide > div dl dd {
   margin: 0 0 1rem 0;
 }
-.recommend-slide .swiper1 .swiper-slide span dl dd:nth-of-type(1),
-.recommend-slide .swiper2 .swiper-slide span dl dd:nth-of-type(1),
-.event-slide .swiper1 .swiper-slide span dl dd:nth-of-type(1),
-.event-slide .swiper2 .swiper-slide span dl dd:nth-of-type(1) {
+.recommend-slide .swiper1 .swiper-slide > div dl dd:nth-of-type(1),
+.recommend-slide .swiper2 .swiper-slide > div dl dd:nth-of-type(1),
+.event-slide .swiper1 .swiper-slide > div dl dd:nth-of-type(1),
+.event-slide .swiper2 .swiper-slide > div dl dd:nth-of-type(1) {
   font-style: italic;
   color: #cacaca;
 }
-.recommend-slide .swiper1 .swiper-slide span dl dd b,
-.recommend-slide .swiper2 .swiper-slide span dl dd b,
-.event-slide .swiper1 .swiper-slide span dl dd b,
-.event-slide .swiper2 .swiper-slide span dl dd b {
+.recommend-slide .swiper1 .swiper-slide > div dl dd b,
+.recommend-slide .swiper2 .swiper-slide > div dl dd b,
+.event-slide .swiper1 .swiper-slide > div dl dd b,
+.event-slide .swiper2 .swiper-slide > div dl dd b {
   margin: 0 1rem 0 0;
   color: #92c501;
 }
-.recommend-slide .swiper1 .swiper-slide span dl dd em,
-.recommend-slide .swiper2 .swiper-slide span dl dd em,
-.event-slide .swiper1 .swiper-slide span dl dd em,
-.event-slide .swiper2 .swiper-slide span dl dd em {
+.recommend-slide .swiper1 .swiper-slide > div dl dd em,
+.recommend-slide .swiper2 .swiper-slide > div dl dd em,
+.event-slide .swiper1 .swiper-slide > div dl dd em,
+.event-slide .swiper2 .swiper-slide > div dl dd em {
   margin: 0 1rem 0 0;
   text-decoration: line-through;
   color: #cacaca;
 }
-.recommend-slide .swiper1 .swiper-slide span ul,
-.recommend-slide .swiper2 .swiper-slide span ul,
-.event-slide .swiper1 .swiper-slide span ul,
-.event-slide .swiper2 .swiper-slide span ul {
+.recommend-slide .swiper1 .swiper-slide > div ul,
+.recommend-slide .swiper2 .swiper-slide > div ul,
+.event-slide .swiper1 .swiper-slide > div ul,
+.event-slide .swiper2 .swiper-slide > div ul {
   position: absolute;
   right: 3rem;
   bottom: 3rem;
@@ -923,16 +918,16 @@ p, button {
   -o-transition: 0.2s ease-in;
   opacity: 0;
 }
-.recommend-slide .swiper1 .swiper-slide span ul li,
-.recommend-slide .swiper2 .swiper-slide span ul li,
-.event-slide .swiper1 .swiper-slide span ul li,
-.event-slide .swiper2 .swiper-slide span ul li {
+.recommend-slide .swiper1 .swiper-slide > div ul li,
+.recommend-slide .swiper2 .swiper-slide > div ul li,
+.event-slide .swiper1 .swiper-slide > div ul li,
+.event-slide .swiper2 .swiper-slide > div ul li {
   margin: 1rem 0 0 0;
 }
-.recommend-slide .swiper1 .swiper-slide span ul li button,
-.recommend-slide .swiper2 .swiper-slide span ul li button,
-.event-slide .swiper1 .swiper-slide span ul li button,
-.event-slide .swiper2 .swiper-slide span ul li button {
+.recommend-slide .swiper1 .swiper-slide > div ul li button,
+.recommend-slide .swiper2 .swiper-slide > div ul li button,
+.event-slide .swiper1 .swiper-slide > div ul li button,
+.event-slide .swiper2 .swiper-slide > div ul li button {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
@@ -943,35 +938,35 @@ p, button {
   /* mobile */
 }
 @media screen and (max-width: 767px) {
-  .recommend-slide .swiper1 .swiper-slide span ul li button,
-  .recommend-slide .swiper2 .swiper-slide span ul li button,
-  .event-slide .swiper1 .swiper-slide span ul li button,
-  .event-slide .swiper2 .swiper-slide span ul li button {
+  .recommend-slide .swiper1 .swiper-slide > div ul li button,
+  .recommend-slide .swiper2 .swiper-slide > div ul li button,
+  .event-slide .swiper1 .swiper-slide > div ul li button,
+  .event-slide .swiper2 .swiper-slide > div ul li button {
     width: 3.5rem;
     height: 3.5rem;
   }
 }
-.recommend-slide .swiper1 .swiper-slide span ul li button img,
-.recommend-slide .swiper2 .swiper-slide span ul li button img,
-.event-slide .swiper1 .swiper-slide span ul li button img,
-.event-slide .swiper2 .swiper-slide span ul li button img {
+.recommend-slide .swiper1 .swiper-slide > div ul li button img,
+.recommend-slide .swiper2 .swiper-slide > div ul li button img,
+.event-slide .swiper1 .swiper-slide > div ul li button img,
+.event-slide .swiper2 .swiper-slide > div ul li button img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   /* mobile */
 }
 @media screen and (max-width: 767px) {
-  .recommend-slide .swiper1 .swiper-slide span ul li button img,
-  .recommend-slide .swiper2 .swiper-slide span ul li button img,
-  .event-slide .swiper1 .swiper-slide span ul li button img,
-  .event-slide .swiper2 .swiper-slide span ul li button img {
+  .recommend-slide .swiper1 .swiper-slide > div ul li button img,
+  .recommend-slide .swiper2 .swiper-slide > div ul li button img,
+  .event-slide .swiper1 .swiper-slide > div ul li button img,
+  .event-slide .swiper2 .swiper-slide > div ul li button img {
     object-fit: contain;
   }
 }
-.recommend-slide .swiper1 .swiper-slide span ul li button:hover,
-.recommend-slide .swiper2 .swiper-slide span ul li button:hover,
-.event-slide .swiper1 .swiper-slide span ul li button:hover,
-.event-slide .swiper2 .swiper-slide span ul li button:hover {
+.recommend-slide .swiper1 .swiper-slide > div ul li button:hover,
+.recommend-slide .swiper2 .swiper-slide > div ul li button:hover,
+.event-slide .swiper1 .swiper-slide > div ul li button:hover,
+.event-slide .swiper2 .swiper-slide > div ul li button:hover {
   background-color: #92c501;
 }
 .recommend-slide .swiper1 .swiper-slide img,
@@ -983,10 +978,10 @@ p, button {
   height: 100%;
   object-fit: cover;
 }
-.recommend-slide .swiper1 .swiper-slide:hover span,
-.recommend-slide .swiper2 .swiper-slide:hover span,
-.event-slide .swiper1 .swiper-slide:hover span,
-.event-slide .swiper2 .swiper-slide:hover span {
+.recommend-slide .swiper1 .swiper-slide:hover > div,
+.recommend-slide .swiper2 .swiper-slide:hover > div,
+.event-slide .swiper1 .swiper-slide:hover > div,
+.event-slide .swiper2 .swiper-slide:hover > div {
   opacity: 1;
 }
 .recommend-slide .swiper1 .swiper-slide:hover ul,

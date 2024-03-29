@@ -116,7 +116,6 @@ p,button {
         @include mq('767'){
             grid-template-columns: repeat(1, 1fr);
         }
-
         dl {
             padding: 3rem;
             box-sizing: border-box;
@@ -132,7 +131,6 @@ p,button {
             }
 
             dt {
-
                 img {
                     width: 7rem;
                     height: 7rem;
@@ -142,29 +140,30 @@ p,button {
                     -moz-transition: transform .2s ease-in;
                     -o-transition: transform .2s ease-in;
                 }
-
-                h4 {
-                    margin: 1rem 0;
-                    font-size: 2rem;
-
-                    @include mq('1200'){
-                        font-size: 1.8rem;
-                    }
-                    @include mq('980'){
-                        font-size: 1.7rem;
-                    }
-                    @include mq('600'){
-                        font-size: 1.6rem;
-                    }
-                    @include mq('320'){
-                        font-size: 1.5rem;
-                    }
-                }
             }
 
             dd {
                 margin: 2rem 0 0 0;
             }
+        }
+    }
+
+    &-subheading {
+        margin: 1rem 0;
+
+        font : {
+            size: 1.8rem;
+            weight: 600;
+        }
+
+        @include mq('980'){
+            font-size: 1.7rem;
+        }
+        @include mq('600'){
+            font-size: 1.6rem;
+        }
+        @include mq('320'){
+            font-size: 1.5rem;
         }
     }
 }
@@ -354,7 +353,7 @@ p,button {
                 height: 100%;
                 overflow: hidden;
 
-                span {
+                > div {
                     position: absolute;
                     left: 0;
                     top: 0;
@@ -400,6 +399,7 @@ p,button {
                             }
                         }
                     }
+
                     ul {
                         position: absolute;
                         right: 3rem;
@@ -451,7 +451,7 @@ p,button {
                     @include img();
                 }
     
-                &:hover span {
+                &:hover > div {
                     opacity: 1;
                 }
                 &:hover ul {
