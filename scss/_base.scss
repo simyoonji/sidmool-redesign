@@ -78,6 +78,11 @@ span {
                 opacity .2s ease-in, 
                 background-color .2s ease-in;
     z-index: 9999;
+
+    @include mq('600'){
+        width: 2rem;
+        height: 2rem;
+    }
 }
 .mouse-focus {
     opacity: .5;

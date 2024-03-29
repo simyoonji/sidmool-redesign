@@ -90,6 +90,13 @@ span {
   pointer-events: none;
   transition: transform 0.2s ease-in, opacity 0.2s ease-in, background-color 0.2s ease-in;
   z-index: 9999;
+  /* mobile */
+}
+@media screen and (max-width: 600px) {
+  .mouse {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 .mouse-focus {
