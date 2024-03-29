@@ -601,11 +601,17 @@ p, button {
   -moz-transition: transform 0.2s ease-in;
   -o-transition: transform 0.2s ease-in;
 }
-.introduce-main dl dd {
+.introduce-main dl dd:nth-of-type(2) {
   margin: 2rem 0 0 0;
+  /* mobile */
+}
+@media screen and (max-width: 767px) {
+  .introduce-main dl dd:nth-of-type(2) {
+    margin: 1rem 0 0 0;
+  }
 }
 .introduce-subheading {
-  margin: 1rem 0;
+  margin: 0.5rem 0 0 0;
   font-size: 1.8rem;
   font-weight: 600;
   /* tablet */
@@ -736,6 +742,7 @@ p, button {
 }
 .advertise-list li div p {
   margin: 3rem 0 0 0;
+  color: #555555;
   /* mobile */
 }
 @media screen and (max-width: 767px) {
@@ -809,10 +816,39 @@ p, button {
 .event-inner h2 em {
   color: #92c501;
 }
-.recommend-inner h2 p,
-.event-inner h2 p {
+.recommend-inner h2 span,
+.event-inner h2 span {
+  display: block;
   margin: 2rem 0 0 0;
+  font-size: 1.6rem;
+  /* desktop */
+  /* tablet */
+  /* mobile */
   color: #555555;
+}
+@media screen and (max-width: 1200px) {
+  .recommend-inner h2 span,
+  .event-inner h2 span {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 980px) {
+  .recommend-inner h2 span,
+  .event-inner h2 span {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .recommend-inner h2 span,
+  .event-inner h2 span {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .recommend-inner h2 span,
+  .event-inner h2 span {
+    font-size: 1rem;
+  }
 }
 .recommend-slide,
 .event-slide {

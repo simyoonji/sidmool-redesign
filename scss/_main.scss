@@ -143,13 +143,19 @@ p,button {
             }
 
             dd {
-                margin: 2rem 0 0 0;
+                &:nth-of-type(2) {
+                    margin: 2rem 0 0 0;
+
+                    @include mq('767'){
+                        margin: 1rem 0 0 0;
+                    }
+                }
             }
         }
     }
 
     &-subheading {
-        margin: 1rem 0;
+        margin: .5rem 0 0 0;
 
         font : {
             size: 1.8rem;
@@ -265,6 +271,7 @@ p,button {
                 }
                 p {
                     margin: 3rem 0 0 0;
+                    color: #555555;
 
                     @include mq('767'){
                         margin: 2rem 0 0 0;
@@ -328,8 +335,23 @@ p,button {
             color: $color-primary;
         }
 
-        p {
+        span {
+            display: block;
             margin: 2rem 0 0 0;
+            font-size: 1.6rem;
+
+            @include mq('1200'){
+                font-size: 1.5rem;
+            }
+            @include mq('980'){
+                font-size: 1.4rem;
+            }
+            @include mq('600'){
+                font-size: 1.3rem;
+            }
+            @include mq('320'){
+                font-size: 1rem;
+            }
             color: #555555;
         }
       }
