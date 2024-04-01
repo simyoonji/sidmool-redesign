@@ -108,20 +108,123 @@
 
     <!-- main -->
     <main class="main">
+        <div class="sub-nav">
+            <ul>
+                <li>
+                    <a href="./index.html">
+                        <img src="./img/sub_nav_home.png" alt="homr-logo">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./login.html">
+                        로그인
+                    </a>
+                </li>
+            </ul>
+        </div>
+
         <div class="main-inner">
-            <h2>login</h2>
+            <div>
+                <h2>로그인</h2>
+                <p>시드물을 통해 자연의 순수함을 피부로 느껴보세요</p>
+            </div>
 
             <form class="main-form">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" placeholder="아이디" required>
+                <label for="id">id</label>
+                <input type="text" id="id" name="id" placeholder="아이디" required>
                 
-                <label for="password">Password:</label>
+                <label for="password">Password</label>
                 <input type="password" id="password" name="password" placeholder="비밀번호" required>
                 
-                <button type="submit">Login</button>
+                <div class="remember">
+                    <div>
+                        <input type="checkbox" id="save-id">
+                        <label for="save-id">아이디 저장</label>
+
+                        <input type="checkbox" id="Secure">
+                        <label for="Secure">보안접속</label>
+                    </div>
+
+                    <div>
+                        <a href="#none">
+                            회원가입
+                        </a>
+                    </div>
+                </div>
+
+                <div class="button-area">
+                    <button type="submit">로그인</button>
+                    <button type="button">비회원 주문조회</button>
+                </div>
+
+                <div class="find-account">
+                    <ul>
+                        <li>
+                            <a href="#none">
+                                아이디 찾기
+                            </a>
+                        </li>
+        
+                        <li>
+                            <a href="#none">
+                                비밀번호 찾기
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sns-login">
+                    <ul>
+                        <li>
+                            <a href="#none">
+                                <img src="./img/kakaoTalk logo.png" alt="kakaoTalk login">
+                            </a>
+                            <span>kakaoTalk login</span>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <img src="./img/naver logo.png" alt="naver login">
+                            </a>
+                            <span>naver login</span>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <img src="./img/faceBook logo.png" alt="facebook login">
+                            </a>
+                            <span>facebook login</span>
+                        </li>
+                    </ul>
+                </div>
             </form>
         </div>
     </main>
+
+    <section>
+        <h3>
+            <em>시드물</em>을 찾아주신 분들께 드리는<br> 회원가입 혜택!
+        </h3>
+
+        <div>
+            <ul>
+                <li>
+                    <img src="./img/coupon.png" alt="coupon">
+
+                    <span>
+                       5,000원 쿠폰증정!
+                    </span>
+                </li>
+
+                <li>
+                    <img src="./img/coupon2.png" alt="coupon">
+
+                    <span>
+                        인기상품 10% 할인혜택!
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </section>
 
     <!-- footer -->
     <footer id="footer">

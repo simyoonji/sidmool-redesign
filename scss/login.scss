@@ -1,45 +1,265 @@
 @import "abstract";
-
 @import "base";
 @import "animations";
-
 @import "header";
 @import "footer";
 
 .main {
     width: 100%;
-    height: 100vh;
+    height: auto;
+
+    .sub-nav {
+        padding: 10rem 0 0 0;
+        box-sizing: border-box;
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+
+            li {
+                color: #787878;
+
+                &:nth-of-type(2) {
+                    display: flex;
+                    align-items: center;
+
+                    &::before {
+                        content: '';
+                        display: inline-flex;
+                        width: .4rem;
+                        height: .4rem;
+                        border: 1px solid #fff0;
+                        border : {
+                            top-color: #aaa;
+                            right-color: #aaa;
+                        }
+                        transform: rotate(45deg);
+                        margin: 0 12px;
+                    }
+                }
+            }
+        }
+    }
 
     &-inner {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
+        width: 47rem;
+        margin: 0 auto;
+        padding: 5rem 0 0 0;
+        box-sizing: border-box;
 
-        h2 {
+        > div {
+            text-align: center;
+            margin: 0 0 2rem 0;
+
+            h2 {
             text-transform: uppercase;
-            font-size: 3rem;
-        }
+            font-size: 4rem;
+            margin: 0 0 .8rem 0;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+        } 
     }
 
     &-form {
         display: flex;
         flex-direction: column;
-        width: 50rem;
-        border: 1px solid red;
+        width: 47rem;
+        font-size: 1.4rem;
 
-        label {
+        label[for = "id"], label[for = "password"] {
             display: none;
         }
+
         input {
-            padding: 1rem 2rem;
+            padding: 1.5rem;
             box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: .6rem;
+
+            &[type = "password"]{
+                margin: .8rem 0 0 0;
+            }
+
+            &:hover {
+                border: 1px solid $color-primary;
+            }
         }
-        button {
-            padding: 1rem 2rem;
+
+        .remember {
+            display: flex;
+            justify-content: space-between;
+            margin: 1.5rem 0;
+            color: #787878;
+        
+            div {
+
+                &:nth-of-type(1) {
+                    display: flex;
+                }
+
+                &:nth-of-type(2) {
+                    border: 1px solid #ddd;
+                    padding: .5rem;
+                    box-sizing: border-box;
+                    border-radius: .6rem;
+                }
+
+                input[type="checkbox"] {
+                    display: none;
+                }
+        
+                input[type="checkbox"]:checked + label::before {
+                    background-image: url('../img/chk_on.png');
+                }
+            }
+        
+            label {
+                display: flex;
+                align-items: center;
+                cursor: none;
+               
+        
+                &[for = "save-id"]{
+                    margin: 0 1rem 0 0;
+                }
+
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    width: 2rem;
+                    height: 2rem;
+                    margin: 0 .5rem 0 0;
+                    background: url('../img/chk_off.png') center center no-repeat;
+                    background-size: cover;
+                }
+            }
+        }
+        
+        .button-area {
+            button {
+                width: 100%;
+                padding: 1.5rem 1rem;
+                box-sizing: border-box;
+                font-size: 1.8rem;
+                border-radius: .6rem;
+
+                &:nth-of-type(1) {
+                    margin: 0 0 1rem 0;
+                    background-color: $color-primary;
+                    color: #fff;
+                }
+                &:nth-of-type(2) {
+                    background-color: #fff;
+                    border: 1px solid #ddd;
+                }
+            }
+        }
+        
+        .find-account {
+            color: #787878;
+
+            ul {
+                display: flex;
+                justify-content: center;
+                margin: 2rem 0;
+
+                li {
+                    margin: 0 .5rem;
+
+                    a {
+                        display: block;
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .sns-login {
+            padding: 2rem 0;
             box-sizing: border-box;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+
+            ul {
+                display: flex;
+                justify-content: center;
+
+                li {
+                    margin: 0 .9rem;
+                    a {
+                        display: block;
+                        width: 4rem;
+                        height: 4rem;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+section {
+    width: 47rem;
+    margin: 0 auto 10rem;
+
+    h3 {
+        margin: 5rem 0;
+        text-align: center;
+        font : {
+            size: 2.5rem;
+            weight: 500;
+        }
+
+        em {
+            color: $color-primary;
+        }
+    }
+
+    > div {
+        padding: 0 0 3rem 0;
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 2rem;
+            text-align: center;
+
+            li {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 4rem 0;
+                box-sizing: border-box;
+                box-shadow: 0 0 0.8rem 0 rgb(218, 218, 218);
+                border-radius: 2rem;
+
+                img {
+                    width: 5rem;
+                    height: 5rem;
+                    margin: 0 0 1rem 0;
+                    object-fit: cover;
+                }
+
+                span {
+                    font-size: 1.4rem;
+                }
+            }
         }
     }
 }
