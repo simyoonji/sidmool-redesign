@@ -4,13 +4,51 @@
 @import "header";
 @import "footer";
 
+p, span, a, label {
+    font-size: 1.4rem;
+
+    @include mq('1200'){
+        font-size: 1.4rem;
+    }
+    @include mq('600'){
+        font-size: 1.3rem;
+    }
+    @include mq('320'){
+        font-size: 1rem;
+    }
+}
+
+h3 {
+    @include mq('1200'){
+        font-size: 2.4rem;
+    }
+    @include mq('980'){
+        font-size: 2.3rem;
+    }
+    @include mq('600'){
+        font-size: 2rem;
+        margin: 7rem 0;
+    }
+    @include mq('320'){
+        font-size: 1.9rem;
+    }
+}
+
 .main {
-    width: 100%;
-    height: auto;
+    padding: 0 3rem;
+    box-sizing: border-box;
+
+    @include mq('1200'){
+        padding: 0 2rem;
+    }
 
     .sub-nav {
         padding: 10rem 0 0 0;
         box-sizing: border-box;
+
+        @include mq('600'){
+            padding: 7rem 0 0 0;
+        }
 
         ul {
             display: flex;
@@ -48,16 +86,21 @@
         padding: 5rem 0 0 0;
         box-sizing: border-box;
 
+        @include mq('600'){
+            width: 100%;
+        }
+
         > div {
             text-align: center;
             margin: 0 0 2rem 0;
 
-            h2 {
-            text-transform: uppercase;
-            font-size: 4rem;
-            margin: 0 0 .8rem 0;
+            @include mq('600'){
+                margin: 0 0 4rem 0;
             }
 
+            h2 {
+                margin: 0 0 .8rem 0;
+            }
             p {
                 font-size: 1.5rem;
             }
@@ -69,6 +112,10 @@
         flex-direction: column;
         width: 47rem;
         font-size: 1.4rem;
+
+        @include mq('600'){
+            width: 100%;
+        }
 
         label[for = "id"], label[for = "password"] {
             display: none;
@@ -94,6 +141,8 @@
             justify-content: space-between;
             margin: 1.5rem 0;
             color: #787878;
+
+            margin: 2rem 0;
         
             div {
 
@@ -121,7 +170,6 @@
                 display: flex;
                 align-items: center;
                 cursor: none;
-               
         
                 &[for = "save-id"]{
                     margin: 0 1rem 0 0;
@@ -173,7 +221,6 @@
                     a {
                         display: block;
                     }
-
                     &:hover {
                         text-decoration: underline;
                     }
@@ -204,7 +251,6 @@
                             object-fit: cover;
                         }
                     }
-
                     span {
                         display: none;
                     }
@@ -218,14 +264,29 @@ section {
     width: 47rem;
     margin: 0 auto 10rem;
 
+    @include mq('600'){
+        width: 100%;
+        padding: 0 2rem;
+        margin: 0 auto 7rem;
+        box-sizing: border-box;
+    }
+
     h3 {
         margin: 5rem 0;
         text-align: center;
+
         font : {
             size: 2.5rem;
             weight: 500;
         }
 
+        br {
+            @include mq('480'){
+                display: none;
+            }
+            
+        }
+        
         em {
             color: $color-primary;
         }
@@ -239,6 +300,11 @@ section {
             grid-template-columns: repeat(2,1fr);
             gap: 2rem;
             text-align: center;
+
+            @include mq('600'){
+                grid-template-columns: repeat(1,1fr);
+                gap: 3rem;
+            }
 
             li {
                 display: flex;
@@ -254,10 +320,6 @@ section {
                     height: 5rem;
                     margin: 0 0 1rem 0;
                     object-fit: cover;
-                }
-
-                span {
-                    font-size: 1.4rem;
                 }
             }
         }

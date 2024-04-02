@@ -25,6 +25,35 @@ body {
   box-sizing: border-box;
 }
 
+h2 {
+  font-size: 4rem;
+  text-align: center;
+  text-transform: uppercase;
+  /* desktop */
+  /* tablet */
+  /* mobile */
+}
+@media screen and (max-width: 1200px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 980px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: 2.3rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  h2 {
+    font-size: 2.2rem;
+  }
+}
+
 ul {
   list-style: none;
 }
@@ -831,13 +860,73 @@ dl {
   }
 }
 
+p, span, a, label {
+  font-size: 1.4rem;
+  /* desktop */
+  /* mobile */
+}
+@media screen and (max-width: 1200px) {
+  p, span, a, label {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  p, span, a, label {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  p, span, a, label {
+    font-size: 1rem;
+  }
+}
+
+h3 {
+  /* desktop */
+  /* tablet */
+  /* mobile */
+}
+@media screen and (max-width: 1200px) {
+  h3 {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (max-width: 980px) {
+  h3 {
+    font-size: 2.3rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  h3 {
+    font-size: 2rem;
+    margin: 7rem 0;
+  }
+}
+@media screen and (max-width: 320px) {
+  h3 {
+    font-size: 1.9rem;
+  }
+}
+
 .main {
-  width: 100%;
-  height: auto;
+  padding: 0 3rem;
+  box-sizing: border-box;
+  /* desktop */
+}
+@media screen and (max-width: 1200px) {
+  .main {
+    padding: 0 2rem;
+  }
 }
 .main .sub-nav {
   padding: 10rem 0 0 0;
   box-sizing: border-box;
+  /* mobile */
+}
+@media screen and (max-width: 600px) {
+  .main .sub-nav {
+    padding: 7rem 0 0 0;
+  }
 }
 .main .sub-nav ul {
   display: flex;
@@ -867,14 +956,24 @@ dl {
   margin: 0 auto;
   padding: 5rem 0 0 0;
   box-sizing: border-box;
+  /* mobile */
+}
+@media screen and (max-width: 600px) {
+  .main-inner {
+    width: 100%;
+  }
 }
 .main-inner > div {
   text-align: center;
   margin: 0 0 2rem 0;
+  /* mobile */
+}
+@media screen and (max-width: 600px) {
+  .main-inner > div {
+    margin: 0 0 4rem 0;
+  }
 }
 .main-inner > div h2 {
-  text-transform: uppercase;
-  font-size: 4rem;
   margin: 0 0 0.8rem 0;
 }
 .main-inner > div p {
@@ -885,6 +984,12 @@ dl {
   flex-direction: column;
   width: 47rem;
   font-size: 1.4rem;
+  /* mobile */
+}
+@media screen and (max-width: 600px) {
+  .main-form {
+    width: 100%;
+  }
 }
 .main-form label[for=id], .main-form label[for=password] {
   display: none;
@@ -906,6 +1011,7 @@ dl {
   justify-content: space-between;
   margin: 1.5rem 0;
   color: #787878;
+  margin: 2rem 0;
 }
 .main-form .remember div:nth-of-type(1) {
   display: flex;
@@ -1002,12 +1108,29 @@ dl {
 section {
   width: 47rem;
   margin: 0 auto 10rem;
+  /* mobile */
+}
+@media screen and (max-width: 600px) {
+  section {
+    width: 100%;
+    padding: 0 2rem;
+    margin: 0 auto 7rem;
+    box-sizing: border-box;
+  }
 }
 section h3 {
   margin: 5rem 0;
   text-align: center;
   font-size: 2.5rem;
   font-weight: 500;
+}
+section h3 br {
+  /* mobile */
+}
+@media screen and (max-width: 480) {
+  section h3 br {
+    display: none;
+  }
 }
 section h3 em {
   color: #92c501;
@@ -1020,6 +1143,13 @@ section > div ul {
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   text-align: center;
+  /* mobile */
+}
+@media screen and (max-width: 600px) {
+  section > div ul {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+  }
 }
 section > div ul li {
   display: flex;
@@ -1035,7 +1165,4 @@ section > div ul li img {
   height: 5rem;
   margin: 0 0 1rem 0;
   object-fit: cover;
-}
-section > div ul li span {
-  font-size: 1.4rem;
 }

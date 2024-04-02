@@ -41,6 +41,12 @@ $color-white:#fff;
             @content;
         }
     }
+    @else if $screen-width == "480" {
+        /* mobile */
+        @media screen and (max-width:480){
+            @content;
+        }
+    }
     @else if $screen-width == "320" {
         @media screen and (max-width:320px){
             @content;
