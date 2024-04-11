@@ -589,7 +589,7 @@ p, button {
   }
 }
 .introduce-main dl {
-  padding: 3rem;
+  padding: 4rem;
   box-sizing: border-box;
   background-color: #f5f6ee;
   border-radius: 2rem;
@@ -622,25 +622,25 @@ p, button {
   }
 }
 .introduce-subheading {
-  margin: 0.5rem 0 0 0;
-  font-size: 1.8rem;
+  margin: 2rem 0 0 0;
+  font-size: 2rem;
   font-weight: 600;
   /* tablet */
   /* mobile */
 }
 @media screen and (max-width: 980px) {
   .introduce-subheading {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
   }
 }
 @media screen and (max-width: 600px) {
   .introduce-subheading {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
 }
 @media screen and (max-width: 320px) {
   .introduce-subheading {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -774,7 +774,7 @@ p, button {
   /* mobile */
 }
 .advertise-list li div button:hover {
-  background-color: #c9d8a3;
+  background-color: #92c501;
 }
 @media screen and (max-width: 767px) {
   .advertise-list li div button {
@@ -904,6 +904,7 @@ p, button {
   -moz-transition: opacity 0.2s ease-in;
   -o-transition: opacity 0.2s ease-in;
   white-space: nowrap;
+  cursor: none;
 }
 .recommend-slide .swiper1 .swiper-slide > div dl,
 .recommend-slide .swiper2 .swiper-slide > div dl,

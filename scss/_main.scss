@@ -99,7 +99,7 @@ p,button {
             grid-template-columns: repeat(1, 1fr);
         }
         dl {
-            padding: 3rem;
+            padding: 4rem;
             box-sizing: border-box;
             background-color: #f5f6ee;
             border-radius: 2rem;
@@ -137,21 +137,21 @@ p,button {
     }
 
     &-subheading {
-        margin: .5rem 0 0 0;
+        margin: 2rem 0 0 0;
 
         font : {
-            size: 1.8rem;
+            size: 2rem;
             weight: 600;
         }
 
         @include mq('980'){
-            font-size: 1.7rem;
+            font-size: 1.8rem;
         }
         @include mq('600'){
-            font-size: 1.6rem;
+            font-size: 1.7rem;
         }
         @include mq('320'){
-            font-size: 1.5rem;
+            font-size: 1.6rem;
         }
     }
 }
@@ -270,7 +270,7 @@ p,button {
                     transition: background-color .2s ease-in;
 
                     &:hover {
-                        background-color: #c9d8a3;
+                        background-color: $color-primary;
                     }
 
                     @include mq('767'){
@@ -371,6 +371,7 @@ p,button {
                     -moz-transition: opacity .2s ease-in;
                     -o-transition: opacity .2s ease-in;
                     white-space: nowrap;
+                    cursor: none;
     
                     dl {
                         position: absolute;
