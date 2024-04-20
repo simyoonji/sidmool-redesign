@@ -10,7 +10,7 @@ section {
     }
 }
 
-p,button {
+p, button {
     font-size: 1.6rem;
 
     @include mq('1200'){
@@ -99,13 +99,13 @@ p,button {
             grid-template-columns: repeat(1, 1fr);
         }
         dl {
-            padding: 4rem;
+            padding: 4rem 3rem;
             box-sizing: border-box;
             background-color: #f5f6ee;
             border-radius: 2rem;
 
             @include mq('1200'){
-                padding: 2rem;
+                padding: 4rem 2rem;
             }
 
             &:hover img {
@@ -125,11 +125,28 @@ p,button {
             }
 
             dd {
+
+                &:nth-of-type(1) {
+                    white-space: nowrap;
+                }
                 &:nth-of-type(2) {
+                    font-size: 1.8rem;
                     margin: 2rem 0 0 0;
 
+                    @include mq('1200'){
+                        font-size: 1.7rem;
+                    }
+                    @include mq('980'){
+                        font-size: 1.6rem;
+                    }
                     @include mq('767'){
                         margin: 1rem 0 0 0;
+                    }
+                    @include mq('600'){
+                        font-size: 1.5rem;
+                    }
+                    @include mq('320'){
+                        font-size: 1.2rem;
                     }
                 }
             }

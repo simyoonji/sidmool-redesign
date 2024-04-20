@@ -589,7 +589,7 @@ p, button {
   }
 }
 .introduce-main dl {
-  padding: 4rem;
+  padding: 4rem 3rem;
   box-sizing: border-box;
   background-color: #f5f6ee;
   border-radius: 2rem;
@@ -597,7 +597,7 @@ p, button {
 }
 @media screen and (max-width: 1200px) {
   .introduce-main dl {
-    padding: 2rem;
+    padding: 4rem 2rem;
   }
 }
 .introduce-main dl:hover img {
@@ -612,13 +612,40 @@ p, button {
   -moz-transition: transform 0.2s ease-in;
   -o-transition: transform 0.2s ease-in;
 }
+.introduce-main dl dd:nth-of-type(1) {
+  white-space: nowrap;
+}
 .introduce-main dl dd:nth-of-type(2) {
+  font-size: 1.8rem;
   margin: 2rem 0 0 0;
+  /* desktop */
+  /* tablet */
   /* mobile */
+  /* mobile */
+}
+@media screen and (max-width: 1200px) {
+  .introduce-main dl dd:nth-of-type(2) {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 980px) {
+  .introduce-main dl dd:nth-of-type(2) {
+    font-size: 1.6rem;
+  }
 }
 @media screen and (max-width: 767px) {
   .introduce-main dl dd:nth-of-type(2) {
     margin: 1rem 0 0 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .introduce-main dl dd:nth-of-type(2) {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .introduce-main dl dd:nth-of-type(2) {
+    font-size: 1.2rem;
   }
 }
 .introduce-subheading {
