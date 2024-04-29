@@ -1,12 +1,13 @@
 // variables 
 $color-primary: #92c501;
+$color-sub : #b3ca73;
 $color-white:#fff;
 
 @mixin pt-Absolute(){
     position: absolute;
     left: 50%;
     top: 50%;
-    transition: transform(-50%,-50%);
+    transition: transform(-50%, -50%);
 }
 
 @mixin img(){

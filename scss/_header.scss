@@ -4,8 +4,9 @@
     width: 100%;
     padding: 0 3rem;
     box-sizing: border-box;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255,255,255,0.3);
     box-shadow: 0 0 .8rem 0 #00000064;
+    backdrop-filter: blur(1rem);
     z-index: 1999;
 
     @include mq('1200'){
@@ -164,7 +165,7 @@
     box-sizing: border-box;
     opacity: 0;
     visibility: hidden;
-    background-color: #ffffffef;
+    background-color: rgba(0,0,0,0.4);
     transition: opacity .2s ease-in, visibility .2s ease-in;
     -webkit-transition: opacity .2s ease-in, visibility .2s ease-in;
     -moz-transition: opacity .2s ease-in, visibility .2s ease-in;
@@ -185,10 +186,6 @@
             outline: none;
             border-radius: 2rem;
 
-            &:hover legend {
-                color: $color-primary;
-            }
-
             legend {
                 padding: 0 0 2rem 0;
                 text-transform: uppercase;
@@ -196,6 +193,7 @@
                 -webkit-transition: color .2s ease-in;
                 -moz-transition: color .2s ease-in;
                 -o-transition: color .2s ease-in;
+                color: #fff;
 
                 font : {
                     size: 2rem;
@@ -214,8 +212,8 @@
                 border: none;
                 outline: none;
                 border-radius: 2rem;
-                box-shadow: 0 0 2px 0 $color-primary;
-
+                box-shadow: 0 0 .2rem 0 $color-primary;
+                background-color: rgba(255,255,255,0.8);
                 
                 @include mq('600'){
                     padding: .8rem 2rem;
