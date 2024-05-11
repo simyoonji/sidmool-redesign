@@ -3,7 +3,7 @@ section {
     height: 100vh;
     padding: 0 3rem;
     box-sizing: border-box;
-    // opacity: 0;
+    opacity: 0;
 
     @include mq('1200'){
         padding: 0 2rem;
@@ -37,7 +37,7 @@ p, button {
     span {
         position: absolute;
         right: 5rem;
-        bottom: 5rem;
+        bottom: 3rem;
         font : {
             size: 7rem;
             family:'Nanum Myeongjo';
@@ -45,6 +45,22 @@ p, button {
         }
         color: #fff;
         text-transform: none;
+
+        @include mq('1200'){
+            font-size: 6.5rem;
+        }
+        @include mq('980'){
+            font-size: 4.5rem;
+        }
+        @include mq('600'){
+            right: 3rem;
+            bottom: 2rem;
+            font-size: 2rem;
+        }
+        @include mq('320'){
+            right: 2rem;
+            bottom: 1.5rem;
+        }
     }
 }
 
@@ -56,6 +72,12 @@ p, button {
     background-color: #fafafa;
 
     @include mq('1200'){
+        height: auto;
+        padding: 0 2rem 5rem 2rem;
+        box-sizing: border-box;
+    }
+    @include mq('767'){
+        display: block;
     }
 
     h2 {
@@ -63,15 +85,21 @@ p, button {
         box-sizing: border-box;
         color: #111111;
 
+        @include mq('1200'){
+            padding: 5rem 0rem;
+        }
+
         &::before {
             content: 'since 2006 sidmool eco philosophy';
             display: block;
             text-transform: none;
             color: $color-primary;
+
             font : {
                 size: 1.6rem;
                 family:'Nanum Myeongjo';
             }
+
             letter-spacing: .2rem;
             animation: letter 1s linear infinite alternate-reverse;
         }
@@ -83,8 +111,7 @@ p, button {
         box-sizing: border-box;
 
         @include mq('1200'){
-        }
-        @include mq('767'){
+            padding: 0rem;
         }
 
         ul {
@@ -93,6 +120,13 @@ p, button {
             gap: 2rem;
             text-align: center;
 
+            @include mq('1200'){
+                grid-template-columns: repeat(2,1fr);
+            }
+            @include mq('767'){
+                grid-template-columns: repeat(1,1fr);
+            }
+            
             li {
                 display: flex;
                 flex-direction: column;
@@ -101,9 +135,14 @@ p, button {
                 padding: 3rem 2rem;
                 border-radius: 1rem;
                 background-color: #fff;
+
                 box : {
                     sizing: border-box;
                     shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.098);
+                }
+
+                @include mq('767'){
+                    width: 100%;
                 }
 
                 &:hover {
@@ -111,6 +150,11 @@ p, button {
                         &::after {
                             width: 10rem;
                             height: 10rem;
+
+                            @include mq('767'){
+                                width: 7rem;
+                                height: 7rem;
+                            }
                         }
                     }
                     h4 {
@@ -164,6 +208,12 @@ p, button {
                     background-color: #f5f5f5;
                     box-shadow: inset 0 0 .5rem 0 #00000016;
 
+                    @include mq('767'){
+                        width: 12rem;
+                        height: 12rem;
+                        margin: 0 0 .5rem 0;
+                    }
+
                     &::after {
                         content: '';
                         position: absolute;
@@ -173,6 +223,15 @@ p, button {
                         width: 8rem;
                         height: 8rem;
                         transition: width .2s ease, height .2s ease;
+                        -webkit-transition: width .2s ease, height .2s ease;
+                        -moz-transition: width .2s ease, height .2s ease;
+                        -o-transition: width .2s ease, height .2s ease;
+                        
+
+                        @include mq('767'){
+                            width: 6rem;
+                            height: 6rem;
+                        }
                     }
                 }
 
@@ -181,9 +240,15 @@ p, button {
                     box-sizing: border-box;
                     font-size: 2rem;
                     text-transform: uppercase;
-                    white-space: nowrap;
                     color: #111111;
                     transition: transform 0.2s ease;
+                    -webkit-transition: transform 0.2s ease;
+                    -moz-transition: transform 0.2s ease;
+                    -o-transition: transform 0.2s ease;
+
+                    @include mq('767'){
+                        font-size: 1.8rem;
+                    }
                 }
                 p {
                     color: #666666;
@@ -219,11 +284,21 @@ p, button {
     box-sizing: border-box;
     height: auto;
     background-color: #fafafa;
+    opacity: 1;
+
+    @include mq('1200'){
+        padding: 0 0 5rem 0;
+        margin: 0 0 5rem 0;
+    }
     
     > div {
         margin: 0 0 8rem 0;
         text-align: center;
         background-color: $color-sub;
+
+        @include mq('1200'){
+            margin: 0 0 5rem 0;
+        }
 
         h2 {
             display: inline-block;
@@ -232,6 +307,10 @@ p, button {
             box-sizing: border-box;
             color: $color-white;
             text-align: center;
+
+            @include mq('767'){
+                font-size: 1.8rem;
+            }
 
             &::before {
                 content: '';
@@ -244,6 +323,19 @@ p, button {
                 background: url(../img/section3-deco.png)center center no-repeat;
                 background-size: contain;
                 transform: rotate(-30deg);
+
+                @include mq('1200'){
+                    left: -8rem;
+                    top: -5rem;
+                    width: 15rem;
+                    height: 15rem;
+                }
+                @include mq('600'){
+                    left: -4rem;
+                    top: -1rem;
+                    width: 9rem;
+                    height: 9rem;
+                }
             }
             &::after {
                 content: '';
@@ -255,6 +347,19 @@ p, button {
                 height: 20rem;
                 background: url(../img/section3-deco2.png)center center no-repeat;
                 background-size: contain;
+
+                @include mq('1200'){
+                    right: -9rem;
+                    top: -2rem;
+                    width: 10rem;
+                    height: 10rem;
+                }
+                @include mq('600'){
+                    right: -4rem;
+                    top: -1rem;
+                    width: 7rem;
+                    height: 7rem;
+                }
             }
         }
     }
@@ -264,110 +369,83 @@ p, button {
         grid-template-columns: repeat(1,1fr);
         row-gap: 5rem;
         max-width: 124rem;
+        padding: 0 2rem;
         margin: 0 auto;
+        box-sizing: border-box;
+
+        @include mq('1200'){
+            max-width: 100%;
+        }
+        @include mq('767'){
+            grid-template-columns: repeat(1,1fr);
+            gap: 2rem;
+            width: 80%;
+        }
+        @include mq('600'){
+            width: 100%;
+        }
 
         li {
             display: flex;
             justify-content: space-between;
-            border-radius: 2rem;
             background-color: #fff;
-        
-            &:nth-of-type(1){
-                span {
-                    background: url(../img/section3-1-img.jpg)center center no-repeat;
-                    background-size: cover;
+            box-shadow: 0 0 .5rem 0 #00000030;
+            opacity: 0;
 
-                    &::after {
-                        background: url(../img/section3-deco-3.png)center center no-repeat;
-                        background-size: contain;
-                    }
-                }
-            }
-            &:nth-of-type(2){
-                span {
-                    background: url(../img/section3-2-img.jpg)center center no-repeat;
-                    background-size: cover;
-
-                    &::after {
-                        background: url(../img/section3-deco-4.png)center center no-repeat;
-                        background-size: contain;
-                    }
-                }
-            }
-            &:nth-of-type(3){
-                span {
-                    background: url(../img/section3-3-img.jpg)center center no-repeat;
-                    background-size: cover;
-
-                    &::after {
-                        background: url(../img/section3-deco-5.png)center center no-repeat;
-                        background-size: contain;
-                    }
-                }
-            }
-            &:nth-of-type(4){
-                span {
-                    background: url(../img/section3-4-img.jpg)center center no-repeat;
-                    background-size: cover;
-
-                    &::after {
-                        right: 1rem;
-                        width: 18rem;
-                        height: 15rem;
-                        background: url(../img/section3-deco-6.png)center center no-repeat;
-                        background-size: contain;
-                    }
-                }
+            @include mq('767'){
+                flex-direction: column;
+                align-items: center;
             }
 
-            > span {
+            figure {
                 position: relative;
-                width: 45%;
-                height: 50rem;
-                border : {
-                    top-left-radius: 2rem;
-                    bottom-left-radius: 2rem;
-                }
+                width: 50%;
+                padding: 2rem;
+                box-sizing: border-box;
                 transition: transform .2s ease, border-radius .2s ease;
 
-                &:hover {
-                    transform: scale(1.05);
-                    border-radius: 50%;
-                    box-shadow: 0 0 1rem 0 #00000029;
-
-                    &::after {
-                        opacity: 1;
-                        animation: up .3s forwards;
-                    }
+                @include mq('1200'){
+                }
+                @include mq('767'){
+                    width: 100%;
                 }
 
-                &::after {
-                    content: '';
-                    display: inline-block;
-                    position: absolute;
-                    right: 3.5rem;
-                    top: 3rem;
-                    width: 11rem;
-                    height: 11rem;
-                    opacity: 0;
-                    transition: opacity .2s ease;
+                figcaption {
+                    display: none;
+                }
+                img {
+                    width: 100%;
                 }
             }
 
             > div {
                 display: flex;
                 flex-direction: column;
-                align-items: end;
+                align-items: center;
                 justify-content: center;
                 width: 50%;
-                padding: 0 8rem 0 0;
+                padding: 2rem;
                 box-sizing: border-box;
-                text-align: end;
+                text-align: center;
+
+                @include mq('767'){
+                    justify-content: space-between;
+                    width: 100%;
+                    padding: 2rem 5rem;
+                    background-color: #fff;
+                }
             }
 
             h4 {
                 font-size: 2rem;
                 color: $color-sub;
+
+                @include mq('1200'){
+                    font-size: 1.8rem;
+                }
+                @include mq('980'){
+                    font-size: 1.5rem;
+                }
             }
 
             dl {
@@ -384,6 +462,20 @@ p, button {
                     color: #111111;
                     z-index: 0;
 
+                    @include mq('1200'){
+                        font-size: 3rem;
+                    }
+                    @include mq('980'){
+                        padding: 0 0 2.5rem 0;
+                        font-size: 2.5rem;
+                    }
+                    @include mq('767'){
+                        font-size: 2.3rem;
+                    }
+                    @include mq('320'){
+                        font-size: 2.2rem;
+                    }
+
                     &::before {
                         content: '';
                         display: inline-block;
@@ -394,32 +486,62 @@ p, button {
                         height: 1.5rem;
                         background-color: #cfe0b9;
                         z-index: -1;
+
+                        @include mq('1200'){
+                            top: 2.5rem;
+                        }
+                        @include mq('767'){
+                            top: 2rem;
+                            height: 1rem;
+                        }
                     }
                 }
 
                 dd {
+                    font-size: 1.8rem;
                     line-height: 2.5rem;
+                    margin: 2rem 0 4rem 0;
+                    color: #1c1c1b;
 
-                    &:nth-of-type(1) {
-                        font-size: 2rem;
-                        color: #1c1c1b;
+                    @include mq('1200'){
+                        font-size: 1.7rem;
                     }
-                    &:nth-of-type(2) {
-                        margin: 2rem 0 4rem 0;
-                        color: #666666;
+                    @include mq('767'){
+                        font-size: 1.5rem;
+                        margin: 0rem 0 2rem 0;
+                    }
+                    @include mq('600'){
+                        font-size: 1.4rem;
+                    }
+                    
+
+                    br {
+                        @include mq('767'){
+                           display: none;
+                        }
                     }
                 }
             }
 
             a {
                 font-size: 1.8rem;
-                padding: 1rem 3rem;
+                padding: 1rem 2rem;
                 box-sizing: border-box;
                 background-color: $color-sub;
                 color: #fff;
                 text-align: center;
-                border-radius: 4rem;
                 transition: transform .2s ease;
+
+                @include mq('980'){
+                    font-size: 1.5rem;
+                }
+                @include mq('767'){
+                    font-size: 1.4rem;
+                }
+                @include mq('767'){
+                    font-size: 1.2rem;
+                    padding: 1rem 1rem;
+                }
 
                 &:hover {
                     transform: translateY(-10%);

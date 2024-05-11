@@ -1,9 +1,9 @@
 const box1 = document.querySelector(".introduce");
 const box2 = document.querySelector(".advertise");
-const boxList1 = box2.querySelector('.advertise-list li:nth-of-type(1)');
-const boxList2 = box2.querySelector('.advertise-list li:nth-of-type(2)');
-const boxList3 = box2.querySelector('.advertise-list li:nth-of-type(3)');
-const boxList4 = box2.querySelector('.advertise-list li:nth-of-type(4)');
+const boxList1 = box2.querySelector('li:nth-of-type(1)');
+const boxList2 = box2.querySelector('li:nth-of-type(2)');
+const boxList3 = box2.querySelector('li:nth-of-type(3)');
+const boxList4 = box2.querySelector('li:nth-of-type(4)');
 
 const box3 = document.querySelector(".recommend");
 const box4 = document.querySelector(".event");

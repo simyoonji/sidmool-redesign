@@ -173,6 +173,12 @@ span {
   justify-content: space-between;
   align-items: center;
   padding: 0.8rem 0;
+  /* mobile */
+}
+@media screen and (max-width: 600px) {
+  #header nav {
+    padding: 0 0.5rem;
+  }
 }
 #header nav div {
   display: flex;
@@ -202,7 +208,7 @@ span {
 @media screen and (max-width: 600px) {
   #header nav div .menu-open {
     width: 2rem;
-    height: 1.9rem;
+    height: 1.6rem;
   }
 }
 #header nav div .menu-open span {
@@ -220,7 +226,7 @@ span {
 }
 @media screen and (max-width: 600px) {
   #header nav div .menu-open span {
-    height: 0.3rem;
+    height: 0.2rem;
   }
 }
 #header nav div .menu-open span:nth-of-type(1) {
@@ -280,6 +286,12 @@ span {
 #header nav div h1 a img {
   width: 100%;
   object-fit: cover;
+  /* mobile */
+}
+@media screen and (max-width: 600px) {
+  #header nav div h1 a img {
+    width: 90%;
+  }
 }
 #header nav ul {
   display: grid;
@@ -490,6 +502,7 @@ section {
   height: 100vh;
   padding: 0 3rem;
   box-sizing: border-box;
+  opacity: 0;
   /* desktop */
 }
 @media screen and (max-width: 1200px) {
@@ -535,12 +548,38 @@ p, button {
 #main span {
   position: absolute;
   right: 5rem;
-  bottom: 5rem;
+  bottom: 3rem;
   font-size: 7rem;
   font-family: "Nanum Myeongjo";
   font-style: italic;
   color: #fff;
   text-transform: none;
+  /* desktop */
+  /* tablet */
+  /* mobile */
+}
+@media screen and (max-width: 1200px) {
+  #main span {
+    font-size: 6.5rem;
+  }
+}
+@media screen and (max-width: 980px) {
+  #main span {
+    font-size: 4.5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main span {
+    right: 3rem;
+    bottom: 2rem;
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  #main span {
+    right: 2rem;
+    bottom: 1.5rem;
+  }
 }
 
 /* introduce */
@@ -550,11 +589,30 @@ p, button {
   justify-content: center;
   background-color: #fafafa;
   /* desktop */
+  /* mobile */
+}
+@media screen and (max-width: 1200px) {
+  .introduce {
+    height: auto;
+    padding: 0 2rem 5rem 2rem;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 767px) {
+  .introduce {
+    display: block;
+  }
 }
 .introduce h2 {
   padding: 1rem 0 6rem 0;
   box-sizing: border-box;
   color: #111111;
+  /* desktop */
+}
+@media screen and (max-width: 1200px) {
+  .introduce h2 {
+    padding: 5rem 0rem;
+  }
 }
 .introduce h2::before {
   content: "since 2006 sidmool eco philosophy";
@@ -571,13 +629,29 @@ p, button {
   padding: 2rem;
   box-sizing: border-box;
   /* desktop */
-  /* mobile */
+}
+@media screen and (max-width: 1200px) {
+  .introduce-inner {
+    padding: 0rem;
+  }
 }
 .introduce-inner ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   text-align: center;
+  /* desktop */
+  /* mobile */
+}
+@media screen and (max-width: 1200px) {
+  .introduce-inner ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 767px) {
+  .introduce-inner ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .introduce-inner ul li {
   display: flex;
@@ -589,10 +663,23 @@ p, button {
   background-color: #fff;
   box-sizing: border-box;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.098);
+  /* mobile */
+}
+@media screen and (max-width: 767px) {
+  .introduce-inner ul li {
+    width: 100%;
+  }
 }
 .introduce-inner ul li:hover div::after {
   width: 10rem;
   height: 10rem;
+  /* mobile */
+}
+@media screen and (max-width: 767px) {
+  .introduce-inner ul li:hover div::after {
+    width: 7rem;
+    height: 7rem;
+  }
 }
 .introduce-inner ul li:hover h4 {
   transform: translateY(-15%);
@@ -625,6 +712,14 @@ p, button {
   border-radius: 50%;
   background-color: #f5f5f5;
   box-shadow: inset 0 0 0.5rem 0 rgba(0, 0, 0, 0.0862745098);
+  /* mobile */
+}
+@media screen and (max-width: 767px) {
+  .introduce-inner ul li div {
+    width: 12rem;
+    height: 12rem;
+    margin: 0 0 0.5rem 0;
+  }
 }
 .introduce-inner ul li div::after {
   content: "";
@@ -635,15 +730,33 @@ p, button {
   width: 8rem;
   height: 8rem;
   transition: width 0.2s ease, height 0.2s ease;
+  -webkit-transition: width 0.2s ease, height 0.2s ease;
+  -moz-transition: width 0.2s ease, height 0.2s ease;
+  -o-transition: width 0.2s ease, height 0.2s ease;
+  /* mobile */
+}
+@media screen and (max-width: 767px) {
+  .introduce-inner ul li div::after {
+    width: 6rem;
+    height: 6rem;
+  }
 }
 .introduce-inner ul li h4 {
   padding: 1rem 0;
   box-sizing: border-box;
   font-size: 2rem;
   text-transform: uppercase;
-  white-space: nowrap;
   color: #111111;
   transition: transform 0.2s ease;
+  -webkit-transition: transform 0.2s ease;
+  -moz-transition: transform 0.2s ease;
+  -o-transition: transform 0.2s ease;
+  /* mobile */
+}
+@media screen and (max-width: 767px) {
+  .introduce-inner ul li h4 {
+    font-size: 1.8rem;
+  }
 }
 .introduce-inner ul li p {
   color: #666666;
@@ -678,11 +791,25 @@ p, button {
   box-sizing: border-box;
   height: auto;
   background-color: #fafafa;
+  opacity: 1;
+  /* desktop */
+}
+@media screen and (max-width: 1200px) {
+  .advertise {
+    padding: 0 0 5rem 0;
+    margin: 0 0 5rem 0;
+  }
 }
 .advertise > div {
   margin: 0 0 8rem 0;
   text-align: center;
   background-color: #b3ca73;
+  /* desktop */
+}
+@media screen and (max-width: 1200px) {
+  .advertise > div {
+    margin: 0 0 5rem 0;
+  }
 }
 .advertise > div h2 {
   display: inline-block;
@@ -691,6 +818,12 @@ p, button {
   box-sizing: border-box;
   color: #fff;
   text-align: center;
+  /* mobile */
+}
+@media screen and (max-width: 767px) {
+  .advertise > div h2 {
+    font-size: 1.8rem;
+  }
 }
 .advertise > div h2::before {
   content: "";
@@ -703,6 +836,24 @@ p, button {
   background: url(../img/section3-deco.png) center center no-repeat;
   background-size: contain;
   transform: rotate(-30deg);
+  /* desktop */
+  /* mobile */
+}
+@media screen and (max-width: 1200px) {
+  .advertise > div h2::before {
+    left: -8rem;
+    top: -5rem;
+    width: 15rem;
+    height: 15rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .advertise > div h2::before {
+    left: -4rem;
+    top: -1rem;
+    width: 9rem;
+    height: 9rem;
+  }
 }
 .advertise > div h2::after {
   content: "";
@@ -714,96 +865,122 @@ p, button {
   height: 20rem;
   background: url(../img/section3-deco2.png) center center no-repeat;
   background-size: contain;
+  /* desktop */
+  /* mobile */
+}
+@media screen and (max-width: 1200px) {
+  .advertise > div h2::after {
+    right: -9rem;
+    top: -2rem;
+    width: 10rem;
+    height: 10rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .advertise > div h2::after {
+    right: -4rem;
+    top: -1rem;
+    width: 7rem;
+    height: 7rem;
+  }
 }
 .advertise ul {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   row-gap: 5rem;
   max-width: 124rem;
+  padding: 0 2rem;
   margin: 0 auto;
+  box-sizing: border-box;
+  /* desktop */
+  /* mobile */
+  /* mobile */
+}
+@media screen and (max-width: 1200px) {
+  .advertise ul {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .advertise ul {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .advertise ul {
+    width: 100%;
+  }
 }
 .advertise ul li {
   display: flex;
   justify-content: space-between;
-  border-radius: 2rem;
   background-color: #fff;
-}
-.advertise ul li:nth-of-type(1) span {
-  background: url(../img/section3-1-img.jpg) center center no-repeat;
-  background-size: cover;
-}
-.advertise ul li:nth-of-type(1) span::after {
-  background: url(../img/section3-deco-3.png) center center no-repeat;
-  background-size: contain;
-}
-.advertise ul li:nth-of-type(2) span {
-  background: url(../img/section3-2-img.jpg) center center no-repeat;
-  background-size: cover;
-}
-.advertise ul li:nth-of-type(2) span::after {
-  background: url(../img/section3-deco-4.png) center center no-repeat;
-  background-size: contain;
-}
-.advertise ul li:nth-of-type(3) span {
-  background: url(../img/section3-3-img.jpg) center center no-repeat;
-  background-size: cover;
-}
-.advertise ul li:nth-of-type(3) span::after {
-  background: url(../img/section3-deco-5.png) center center no-repeat;
-  background-size: contain;
-}
-.advertise ul li:nth-of-type(4) span {
-  background: url(../img/section3-4-img.jpg) center center no-repeat;
-  background-size: cover;
-}
-.advertise ul li:nth-of-type(4) span::after {
-  right: 1rem;
-  width: 18rem;
-  height: 15rem;
-  background: url(../img/section3-deco-6.png) center center no-repeat;
-  background-size: contain;
-}
-.advertise ul li > span {
-  position: relative;
-  width: 45%;
-  height: 50rem;
-  border-top-left-radius: 2rem;
-  border-bottom-left-radius: 2rem;
-  transition: transform 0.2s ease, border-radius 0.2s ease;
-}
-.advertise ul li > span:hover {
-  transform: scale(1.05);
-  border-radius: 50%;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1607843137);
-}
-.advertise ul li > span:hover::after {
-  opacity: 1;
-  animation: up 0.3s forwards;
-}
-.advertise ul li > span::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  right: 3.5rem;
-  top: 3rem;
-  width: 11rem;
-  height: 11rem;
+  box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.1882352941);
   opacity: 0;
-  transition: opacity 0.2s ease;
+  /* mobile */
+}
+@media screen and (max-width: 767px) {
+  .advertise ul li {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.advertise ul li figure {
+  position: relative;
+  width: 50%;
+  padding: 2rem;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, border-radius 0.2s ease;
+  /* desktop */
+  /* mobile */
+}
+@media screen and (max-width: 767px) {
+  .advertise ul li figure {
+    width: 100%;
+  }
+}
+.advertise ul li figure figcaption {
+  display: none;
+}
+.advertise ul li figure img {
+  width: 100%;
 }
 .advertise ul li > div {
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: center;
   justify-content: center;
   width: 50%;
-  padding: 0 8rem 0 0;
+  padding: 2rem;
   box-sizing: border-box;
-  text-align: end;
+  text-align: center;
+  /* mobile */
+}
+@media screen and (max-width: 767px) {
+  .advertise ul li > div {
+    justify-content: space-between;
+    width: 100%;
+    padding: 2rem 5rem;
+    background-color: #fff;
+  }
 }
 .advertise ul li h4 {
   font-size: 2rem;
   color: #b3ca73;
+  /* desktop */
+  /* tablet */
+}
+@media screen and (max-width: 1200px) {
+  .advertise ul li h4 {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 980px) {
+  .advertise ul li h4 {
+    font-size: 1.5rem;
+  }
 }
 .advertise ul li dl dt {
   display: inline-block;
@@ -815,6 +992,30 @@ p, button {
   text-transform: uppercase;
   color: #111111;
   z-index: 0;
+  /* desktop */
+  /* tablet */
+  /* mobile */
+}
+@media screen and (max-width: 1200px) {
+  .advertise ul li dl dt {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 980px) {
+  .advertise ul li dl dt {
+    padding: 0 0 2.5rem 0;
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .advertise ul li dl dt {
+    font-size: 2.3rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .advertise ul li dl dt {
+    font-size: 2.2rem;
+  }
 }
 .advertise ul li dl dt::before {
   content: "";
@@ -826,27 +1027,80 @@ p, button {
   height: 1.5rem;
   background-color: #cfe0b9;
   z-index: -1;
+  /* desktop */
+  /* mobile */
+}
+@media screen and (max-width: 1200px) {
+  .advertise ul li dl dt::before {
+    top: 2.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .advertise ul li dl dt::before {
+    top: 2rem;
+    height: 1rem;
+  }
 }
 .advertise ul li dl dd {
+  font-size: 1.8rem;
   line-height: 2.5rem;
-}
-.advertise ul li dl dd:nth-of-type(1) {
-  font-size: 2rem;
-  color: #1c1c1b;
-}
-.advertise ul li dl dd:nth-of-type(2) {
   margin: 2rem 0 4rem 0;
-  color: #666666;
+  color: #1c1c1b;
+  /* desktop */
+  /* mobile */
+  /* mobile */
+}
+@media screen and (max-width: 1200px) {
+  .advertise ul li dl dd {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .advertise ul li dl dd {
+    font-size: 1.5rem;
+    margin: 0rem 0 2rem 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .advertise ul li dl dd {
+    font-size: 1.4rem;
+  }
+}
+.advertise ul li dl dd br {
+  /* mobile */
+}
+@media screen and (max-width: 767px) {
+  .advertise ul li dl dd br {
+    display: none;
+  }
 }
 .advertise ul li a {
   font-size: 1.8rem;
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
   box-sizing: border-box;
   background-color: #b3ca73;
   color: #fff;
   text-align: center;
-  border-radius: 4rem;
   transition: transform 0.2s ease;
+  /* tablet */
+  /* mobile */
+  /* mobile */
+}
+@media screen and (max-width: 980px) {
+  .advertise ul li a {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .advertise ul li a {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .advertise ul li a {
+    font-size: 1.2rem;
+    padding: 1rem 1rem;
+  }
 }
 .advertise ul li a:hover {
   transform: translateY(-10%);
