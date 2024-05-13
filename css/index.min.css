@@ -157,8 +157,8 @@ span {
   width: 100%;
   padding: 0 3rem;
   box-sizing: border-box;
-  background-color: rgba(255, 255, 255, 0.3);
   box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.3921568627);
+  background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(1rem);
   z-index: 1999;
   /* desktop */
@@ -173,6 +173,7 @@ span {
   justify-content: space-between;
   align-items: center;
   padding: 0.8rem 0;
+  box-sizing: border-box;
   /* mobile */
 }
 @media screen and (max-width: 600px) {
@@ -351,14 +352,14 @@ span {
   width: 100%;
   padding: 3rem 2rem;
   box-sizing: border-box;
+  box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.1137254902);
+  background-color: rgba(0, 0, 0, 0.4);
   opacity: 0;
   visibility: hidden;
-  background-color: rgba(0, 0, 0, 0.4);
   transition: opacity 0.2s ease-in, visibility 0.2s ease-in;
   -webkit-transition: opacity 0.2s ease-in, visibility 0.2s ease-in;
   -moz-transition: opacity 0.2s ease-in, visibility 0.2s ease-in;
   -o-transition: opacity 0.2s ease-in, visibility 0.2s ease-in;
-  box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.1137254902);
   /* mobile */
 }
 @media screen and (max-width: 600px) {
@@ -378,14 +379,14 @@ span {
 }
 .search-form form fieldset legend {
   padding: 0 0 2rem 0;
+  color: #fff;
+  font-size: 2rem;
+  font-style: italic;
   text-transform: uppercase;
   transition: color 0.2s ease-in;
   -webkit-transition: color 0.2s ease-in;
   -moz-transition: color 0.2s ease-in;
   -o-transition: color 0.2s ease-in;
-  color: #fff;
-  font-size: 2rem;
-  font-style: italic;
   /* mobile */
 }
 @media screen and (max-width: 600px) {
@@ -398,8 +399,8 @@ span {
   width: 100%;
   padding: 1rem 2rem;
   border: none;
-  outline: none;
   border-radius: 2rem;
+  outline: none;
   box-shadow: 0 0 0.2rem 0 #92c501;
   background-color: rgba(255, 255, 255, 0.8);
   /* mobile */
@@ -422,8 +423,8 @@ span {
   width: 100%;
   height: 100vh;
   background-color: #fff;
-  visibility: hidden;
   opacity: 0;
+  visibility: hidden;
   transition: visibility 0.2s ease-in, opacity 0.2s ease-in;
   -webkit-transition: visibility 0.2s ease-in, opacity 0.2s ease-in;
   -o-transition: visibility 0.2s ease-in, opacity 0.2s ease-in;
@@ -446,10 +447,10 @@ span {
   position: relative;
   padding: 3rem 0;
   box-sizing: border-box;
-  font-family: "KyoboHandwriting2020A";
+  color: #4b4b4b;
   font-size: 3rem;
   font-weight: 300;
-  color: #4b4b4b;
+  font-family: "KyoboHandwriting2020A";
   transition: color 0.4s ease-in;
   -webkit-transition: color 0.4s ease-in;
   -moz-transition: color 0.4s ease-in;
@@ -549,10 +550,10 @@ p, button {
   position: absolute;
   right: 5rem;
   bottom: 3rem;
+  color: #fff;
   font-size: 7rem;
   font-family: "Nanum Myeongjo";
   font-style: italic;
-  color: #fff;
   text-transform: none;
   /* desktop */
   /* tablet */
@@ -617,10 +618,10 @@ p, button {
 .introduce h2::before {
   content: "since 2006 sidmool eco philosophy";
   display: block;
-  text-transform: none;
   color: #92c501;
   font-size: 1.6rem;
   font-family: "Nanum Myeongjo";
+  text-transform: none;
   letter-spacing: 0.2rem;
   animation: letter 1s linear infinite alternate-reverse;
 }
@@ -659,10 +660,10 @@ p, button {
   align-items: center;
   justify-content: flex-start;
   padding: 3rem 2rem;
-  border-radius: 1rem;
-  background-color: #fff;
   box-sizing: border-box;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.098);
+  border-radius: 1rem;
+  background-color: #fff;
   /* mobile */
 }
 @media screen and (max-width: 767px) {
@@ -709,9 +710,9 @@ p, button {
   width: 15rem;
   height: 15rem;
   margin: 0 0 2.5rem 0;
+  box-shadow: inset 0 0 0.5rem 0 rgba(0, 0, 0, 0.0862745098);
   border-radius: 50%;
   background-color: #f5f5f5;
-  box-shadow: inset 0 0 0.5rem 0 rgba(0, 0, 0, 0.0862745098);
   /* mobile */
 }
 @media screen and (max-width: 767px) {
@@ -744,9 +745,9 @@ p, button {
 .introduce-inner ul li h4 {
   padding: 1rem 0;
   box-sizing: border-box;
+  color: #111111;
   font-size: 2rem;
   text-transform: uppercase;
-  color: #111111;
   transition: transform 0.2s ease;
   -webkit-transition: transform 0.2s ease;
   -moz-transition: transform 0.2s ease;
@@ -786,10 +787,10 @@ p, button {
 
 /* advertise */
 .advertise {
+  height: auto;
   padding: 0 0 8rem 0;
   margin: 0 0 7rem 0;
   box-sizing: border-box;
-  height: auto;
   background-color: #fafafa;
   opacity: 1;
   /* desktop */
@@ -831,11 +832,11 @@ p, button {
   position: absolute;
   left: -17rem;
   top: -10rem;
+  transform: rotate(-30deg);
   width: 25rem;
   height: 25rem;
   background: url(../img/section3-deco.png) center center no-repeat;
   background-size: contain;
-  transform: rotate(-30deg);
   /* desktop */
   /* mobile */
 }
@@ -916,8 +917,8 @@ p, button {
 .advertise ul li {
   display: flex;
   justify-content: space-between;
-  background-color: #fff;
   box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.1882352941);
+  background-color: #fff;
   opacity: 0;
   /* mobile */
 }
@@ -933,7 +934,6 @@ p, button {
   padding: 2rem;
   box-sizing: border-box;
   transition: transform 0.2s ease, border-radius 0.2s ease;
-  /* desktop */
   /* mobile */
 }
 @media screen and (max-width: 767px) {
@@ -963,12 +963,13 @@ p, button {
     justify-content: space-between;
     width: 100%;
     padding: 2rem 5rem;
+    box-sizing: border-box;
     background-color: #fff;
   }
 }
 .advertise ul li h4 {
-  font-size: 2rem;
   color: #b3ca73;
+  font-size: 2rem;
   /* desktop */
   /* tablet */
 }
@@ -987,10 +988,10 @@ p, button {
   position: relative;
   padding: 0 0 4rem 0;
   box-sizing: border-box;
+  color: #111111;
   font-size: 4rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: #111111;
   z-index: 0;
   /* desktop */
   /* tablet */
@@ -1042,10 +1043,10 @@ p, button {
   }
 }
 .advertise ul li dl dd {
-  font-size: 1.8rem;
   line-height: 2.5rem;
   margin: 2rem 0 4rem 0;
   color: #1c1c1b;
+  font-size: 1.8rem;
   /* desktop */
   /* mobile */
   /* mobile */
@@ -1057,8 +1058,8 @@ p, button {
 }
 @media screen and (max-width: 767px) {
   .advertise ul li dl dd {
-    font-size: 1.5rem;
     margin: 0rem 0 2rem 0;
+    font-size: 1.5rem;
   }
 }
 @media screen and (max-width: 600px) {
@@ -1075,13 +1076,16 @@ p, button {
   }
 }
 .advertise ul li a {
-  font-size: 1.8rem;
   padding: 1rem 2rem;
   box-sizing: border-box;
-  background-color: #b3ca73;
   color: #fff;
+  font-size: 1.8rem;
   text-align: center;
+  background-color: #b3ca73;
   transition: transform 0.2s ease;
+  -webkit-transition: transform 0.2s ease;
+  -moz-transition: transform 0.2s ease;
+  -o-transition: transform 0.2s ease;
   /* tablet */
   /* mobile */
   /* mobile */
@@ -1098,8 +1102,8 @@ p, button {
 }
 @media screen and (max-width: 767px) {
   .advertise ul li a {
-    font-size: 1.2rem;
     padding: 1rem 1rem;
+    font-size: 1.2rem;
   }
 }
 .advertise ul li a:hover {
@@ -1150,11 +1154,11 @@ p, button {
 .event-inner h2 span {
   display: block;
   margin: 2rem 0 0 0;
+  color: #555555;
   font-size: 1.6rem;
   /* desktop */
   /* tablet */
   /* mobile */
-  color: #555555;
 }
 @media screen and (max-width: 1200px) {
   .recommend-inner h2 span,
@@ -1215,14 +1219,14 @@ p, button {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
   border-radius: 2rem;
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.7);
   opacity: 0;
   transition: opacity 0.2s ease-in;
   -webkit-transition: opacity 0.2s ease-in;
   -moz-transition: opacity 0.2s ease-in;
   -o-transition: opacity 0.2s ease-in;
-  white-space: nowrap;
   cursor: none;
 }
 .recommend-slide .swiper1 .swiper-slide > div dl,
@@ -1253,8 +1257,8 @@ p, button {
 .recommend-slide .swiper2 .swiper-slide > div dl dd:nth-of-type(1),
 .event-slide .swiper1 .swiper-slide > div dl dd:nth-of-type(1),
 .event-slide .swiper2 .swiper-slide > div dl dd:nth-of-type(1) {
-  font-style: italic;
   color: #cacaca;
+  font-style: italic;
 }
 .recommend-slide .swiper1 .swiper-slide > div dl dd b,
 .recommend-slide .swiper2 .swiper-slide > div dl dd b,
@@ -1268,8 +1272,8 @@ p, button {
 .event-slide .swiper1 .swiper-slide > div dl dd em,
 .event-slide .swiper2 .swiper-slide > div dl dd em {
   margin: 0 1rem 0 0;
-  text-decoration: line-through;
   color: #cacaca;
+  text-decoration: line-through;
 }
 .recommend-slide .swiper1 .swiper-slide > div ul,
 .recommend-slide .swiper2 .swiper-slide > div ul,
@@ -1340,10 +1344,10 @@ p, button {
 .recommend-slide .swiper2 .swiper-slide img,
 .event-slide .swiper1 .swiper-slide img,
 .event-slide .swiper2 .swiper-slide img {
-  border-radius: 2rem;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 2rem;
 }
 .recommend-slide .swiper1 .swiper-slide:hover > div,
 .recommend-slide .swiper2 .swiper-slide:hover > div,
@@ -1355,8 +1359,8 @@ p, button {
 .recommend-slide .swiper2 .swiper-slide:hover ul,
 .event-slide .swiper1 .swiper-slide:hover ul,
 .event-slide .swiper2 .swiper-slide:hover ul {
-  opacity: 1;
   transform: translateX(0%);
+  opacity: 1;
 }
 
 .Campaign {
@@ -1385,11 +1389,11 @@ p, button {
 .Campaign-inner h2 span {
   display: block;
   margin: 2rem 0 0 0;
+  color: #555555;
   font-size: 1.6rem;
   /* desktop */
   /* tablet */
   /* mobile */
-  color: #555555;
 }
 @media screen and (max-width: 1200px) {
   .Campaign-inner h2 span {
@@ -1443,8 +1447,8 @@ p, button {
   filter: grayscale(100%);
 }
 .Campaign-img figure img:hover {
-  filter: grayscale(0%);
   transform: scale(1.05);
+  filter: grayscale(0%);
 }
 .Campaign-img figure figcaption {
   position: absolute;
@@ -1463,8 +1467,8 @@ p, button {
   display: inline-block;
   padding: 1rem 2rem;
   box-sizing: border-box;
-  color: #fff;
   border-radius: 2rem;
+  color: #fff;
   background-color: rgba(0, 0, 0, 0.222);
 }
 .Campaign-img figure figcaption dl dt {
@@ -1547,11 +1551,11 @@ p, button {
   box-sizing: border-box;
   border-radius: 2rem;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.098);
+  white-space: nowrap;
   transition: transform 0.2s ease-in;
   -webkit-transition: transform 0.2s ease-in;
   -moz-transition: transform 0.2s ease-in;
   -o-transition: transform 0.2s ease-in;
-  white-space: nowrap;
 }
 .custom ul li a {
   display: flex;
@@ -1566,8 +1570,8 @@ p, button {
   object-fit: cover;
 }
 .custom ul li a div {
-  text-align: center;
   font-size: 1.5rem;
+  text-align: center;
 }
 .custom ul li a div h3 {
   margin: 0 0 1rem 0;
@@ -1634,8 +1638,8 @@ dl {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    text-align: center;
     margin: 0 0 2rem 0;
+    text-align: center;
   }
 }
 @media screen and (max-width: 600px) {
@@ -1669,8 +1673,8 @@ dl {
   }
 }
 #footer .footer-inner > ul li a {
-  font-size: 1.5rem;
   color: #969696;
+  font-size: 1.5rem;
   transition: color 0.3s ease-in;
   -webkit-transition: color 0.3s ease-in;
   -moz-transition: color 0.3s ease-in;
@@ -1831,8 +1835,8 @@ dl {
 }
 @media screen and (max-width: 600px) {
   #footer .footer-info-left > dl {
-    text-align: center;
     margin: 2rem 0 4rem 0;
+    text-align: center;
   }
 }
 #footer .footer-info-left > dl dt {
@@ -1854,8 +1858,8 @@ dl {
 #footer .footer-info-familysite select {
   padding: 1rem;
   box-sizing: border-box;
-  border-radius: 1rem;
   border: none;
+  border-radius: 1rem;
   outline: none;
   color: #666666;
   cursor: none;
@@ -1900,10 +1904,10 @@ dl {
 .quick div {
   width: 6rem;
   height: 6rem;
-  text-align: center;
   border-radius: 50%;
-  background-color: #fff;
   box-shadow: 0 0 0.7rem 0 rgba(0, 0, 0, 0.1921568627);
+  text-align: center;
+  background-color: #fff;
   /* desktop */
 }
 @media screen and (max-width: 1200px) {
@@ -1940,12 +1944,12 @@ dl {
 }
 
 .w3c {
-  padding: 2rem 3rem;
-  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  background-color: #f5f5f5;
+  padding: 2rem 3rem;
+  box-sizing: border-box;
   border-top: 3px double rgba(223, 223, 223, 0.831372549);
+  background-color: #f5f5f5;
   /* mobile */
 }
 @media screen and (max-width: 600px) {
