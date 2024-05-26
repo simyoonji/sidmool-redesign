@@ -1,8 +1,11 @@
-@import "abstract";
-@import "base";
-@import "animations";
-@import "header";
-@import "footer";
+@import "abstract/mixins";
+@import "abstract/variables";
+
+@import "base/base";
+@import "base/animations";
+
+@import "layout/header";
+@import "layout/footer";
 
 p, span, a, label {
     font-size: 1.4rem;
